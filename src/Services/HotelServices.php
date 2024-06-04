@@ -29,18 +29,18 @@ class HotelServices
         $r = $response['results'];
         $nomCompletArray = [];
         $count = 0; // Variable de comptage
-
+        
         foreach ($r as $value) {
             $Adresse = isset($value['matching_etablissements'][0]['adresse']) ? $value['matching_etablissements'][0]['adresse'] : 'N/A';
-
+        
             $nomCompletArray[] = [
                 'nom_complet' => $value['nom_complet'],
                 'nombre_etablissements_ouverts' => $value['nombre_etablissements_ouverts'],
                 'adresse' => $Adresse,
             ];
-
+        
             $count++; // Incrémenter la variable de comptage
-
+        
             if ($count == 8) {
                 break; // Arrêter la boucle après avoir ajouté 15 éléments
             }
@@ -49,10 +49,7 @@ class HotelServices
         // Close the cURL session
         curl_close($ch);
 
-        // Mélanger le tableau des entreprises de manière aléatoire
-        shuffle($nomCompletArray);
-
-        // Retourner le tableau des entreprises mélangé
+        // Return the array of nom_complet values
         return $nomCompletArray;
     }
 }
