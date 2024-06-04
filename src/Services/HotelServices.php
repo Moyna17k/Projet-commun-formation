@@ -33,7 +33,7 @@ class HotelServices
         foreach ($r as $value) {
             $nomCompletArray[] = $value['nom_complet'];
         }
-
+ 
         // Close the cURL session
         curl_close($ch);
 
