@@ -49,7 +49,10 @@ class HotelServices
         // Close the cURL session
         curl_close($ch);
 
-        // Return the array of nom_complet values
+        // Mélanger le tableau des entreprises de manière aléatoire
+        shuffle($nomCompletArray);
+
+        // Retourner le tableau des entreprises mélangé
         return $nomCompletArray;
     }
 }
