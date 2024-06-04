@@ -27,23 +27,19 @@ class HotelServices
 
         // je veux récupérer tous les noms des entreprises
         $r = $response['results'];
-
         $nomCompletArray = [];
+        $count = 0; // Variable de comptage
 
-        foreach ($r as $value) {
-        $Adresse = isset($value['matching_etablissements'][0]['adresse']) ? $value['matching_etablissements'][0]['adresse'] : 'N/A';
+        foreach($r as $value ) {
 
-            $nomCompletArray[] = [
-                'nom_complet' => $value['nom_complet'],
-                'nombre_etablissements_ouverts' => $value['nombre_etablissements_ouverts'],
-                'adresse' => $Adresse,
-            ];
+            dd($value['nom_complet']);
         }
 
         // Close the cURL session
         curl_close($ch);
+ 
+        
+        
 
-        // Return the array of nom_complet values
-        return $nomCompletArray;
     }
 }

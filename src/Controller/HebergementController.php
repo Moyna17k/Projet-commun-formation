@@ -10,17 +10,15 @@ use Symfony\Component\Routing\Attribute\Route;
 class HebergementController extends AbstractController
 {
     public function __construct(
-        Private HotelServices $hotel
-    ){}
+        private HotelServices $hotel
+    ) {
+    }
 
     #[Route('/hebergement', name: 'app_hebergement')]
     public function index(): Response
     {
-
-        dd($this->hotel->hotel());
-        
         return $this->render('hebergement/index.html.twig', [
             'hotel' => $this->hotel->hotel()
-        ]); 
+        ]);
     }
 }
