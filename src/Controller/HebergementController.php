@@ -16,13 +16,11 @@ class HebergementController extends AbstractController
     #[Route('/hebergement', name: 'app_hebergement')]
     public function index(): Response
     {
+
         dd($this->hotel->hotel());
-
         
-
-
         return $this->render('hebergement/index.html.twig', [
-            'controller_name' => 'HebergementController',
-        ]);
+            'hotel' => $this->hotel->hotel()
+        ]); 
     }
 }
