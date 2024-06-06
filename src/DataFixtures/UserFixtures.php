@@ -28,7 +28,6 @@ class UserFixtures extends Fixture
         $user->setPassword($this->userPasswordHasher->hashPassword($user, 'admin'));
         $user->setVerified(true);
         $manager->persist($user);
-        
 
         $manager->flush();
     }
