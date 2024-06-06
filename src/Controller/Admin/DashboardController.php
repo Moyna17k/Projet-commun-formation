@@ -12,6 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
+use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 
 class DashboardController extends AbstractDashboardController
@@ -23,8 +24,8 @@ class DashboardController extends AbstractDashboardController
 
         // Option 1. You can make your dashboard redirect to some common page of your backend
         //
-        // $adminUrlGenerator = $this->container->get(AdminUrlGenerator::class);
-        // return $this->redirect($adminUrlGenerator->setController(OneOfYourCrudController::class)->generateUrl());
+        $adminUrlGenerator = $this->container->get(AdminUrlGenerator::class);
+        return $this->redirect($adminUrlGenerator->setController(ModeCrudController::class)->generateUrl());
 
         // Option 2. You can make your dashboard redirect to different pages depending on the user
         //
@@ -47,11 +48,14 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
-        yield MenuItem::linkToCrud('mode', 'fas fa-list', Mode::class);
-        yield MenuItem::linkToCrud('produits', 'fas fa-list', Produits::class);
-        yield MenuItem::linkToCrud('sport', 'fas fa-list', Sport::class);
-        yield MenuItem::linkToCrud('user', 'fas fa-list', User::class);
-        yield MenuItem::linkToCrud('roleadmin', 'fas fa-list', RoleAdmin::class);
-        yield MenuItem::linkToCrud('setcategory', 'fas fa-list', SetCategory::class);
+
+        MenuItem::section('Produits');
+        yield MenuItem::linkToCrud('Mode', 'fas fa-list', Mode::class);
+        yield MenuItem::linkToCrud('Produits', 'fas fa-list', Produits::class);
+        yield MenuItem::linkToCrud('Sport', 'fas fa-list', Sport::class);
+        MenuItem::section('Admin');
+        yield MenuItem::linkToCrud('User', 'fas fa-list', User::class);
+        yield MenuItem::linkToCrud('Roleadmin', 'fas fa-list', RoleAdmin::class);
+        yield MenuItem::linkToCrud('Setcategory', 'fas fa-list', SetCategory::class);
     }
 }
