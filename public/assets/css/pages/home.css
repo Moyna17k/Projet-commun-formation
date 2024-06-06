@@ -1,12 +1,24 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: red;
+.main-home .container-description {
+    background-color: var(--acc-color);
+    color: white;
 }
 
-h1 {
-    color: #333;
+.main-home .container-description h1 {
+    margin: 8rem 4rem;
 }
 
-p {
-    color: #666;
+.main-home .container-description h1 .quoteG, .quoteR {
+    font-size: 5em;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    max-height: 100px;
+}
+
+.main-home .container-description h1 .quoteG {
+    margin-left: -3rem;
+}
+
+.main-home .container-description h1 .quoteR {
+    transform: scaleX(-1);
+    margin-right: -3rem;
 }
