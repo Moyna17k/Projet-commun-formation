@@ -3,12 +3,63 @@
 {% block title %}Contact{% endblock %}
 
 {% block body %}
-    <h1>Contactez-nous</h1>
+    <div class="container mt-5">
+        
+        <div class="card">
 
-    {{ form_start(form) }}
-        {{ form_row(form.email) }}
-        {{ form_row(form.sujet) }}
-        {{ form_row(form.message) }}
-        {{ form_row(form.envoyer) }}
-    {{ form_end(form) }}
+        <h1 class="mb-4">Contactez-nous</h1>
+
+            <div class="card-body">
+                {{ form_start(form, {'attr': {'class': 'needs-validation', 'novalidate': ''}}) }}
+
+                    <div class="form-group mb-3">
+                        {{ form_label(form.nom) }}
+                        {{ form_widget(form.nom, {'attr': {'class': 'form-control', 'placeholder': 'Votre nom'}}) }}
+                        <div class="invalid-feedback">
+                            {{ form_errors(form.nom) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        {{ form_label(form.prenom) }}
+                        {{ form_widget(form.prenom, {'attr': {'class': 'form-control', 'placeholder': 'Votre prénom'}}) }}
+                        <div class="invalid-feedback">
+                            {{ form_errors(form.prenom) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        {{ form_label(form.email) }}
+                        {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'Votre email'}}) }}
+                        <div class="invalid-feedback">
+                            {{ form_errors(form.email) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        {{ form_label(form.sujet) }}
+                        {{ form_widget(form.sujet, {'attr': {'class': 'form-control', 'placeholder': 'Sujet'}}) }}
+                        <div class="invalid-feedback">
+                            {{ form_errors(form.sujet) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        {{ form_label(form.message) }}
+                        {{ form_widget(form.message, {'attr': {'class': 'form-control', 'placeholder': 'Votre message'}}) }}
+                        <div class="invalid-feedback">
+                            {{ form_errors(form.message) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        {{ form_widget(form.envoyer, {'attr': {'class': 'btn btn-primary'}}) }}
+                    </div>
+
+                {{ form_end(form) }}
+
+            </div>
+        </div>
+    </div>
 {% endblock %}
+
