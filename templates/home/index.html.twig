@@ -3,18 +3,23 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-<main class="main-home">
-    <article class="container-header offset-md-1 mt-5 position-relative">
-        <div class="block-text ps-5 p-5">
-            <h2>LA ROCHELLE <br> UNE VILLE D'HISTOIRE ET D'ACTIVITES</h2>
-        </div>
-        <div class="block-image offset-md-4 position-absolute">
-             <img src="{{ asset('/assets/images/home/image 4.png') }}" alt="Home image">
-        </div>
+<main class="container-fluid g-0">
+    <article class="row d-flex justify-content-center align-items-center">
+            <div class="presentation col-10">
+                <div class="w-50 text-white app-bg">
+                    <h1> LA ROCHELLE
+                        <br>
+                        UNE VILLE D'HISTOIRE
+                        <br>
+                        ET D'ACTIVITES</h1>
+                </div>
+                <img src="{{ asset('/assets/images/home/image 4.png') }}" class="img-fluid position-relative" alt="Home image">
+            </div>
     </article>
+
     <!-- -->
-    <section class="container-description container-fluid d-flex flex-row text-center">
-        <h1><span class="quoteG position-relative">&ldquo;</span> PERLE MARTIME OU L'HISTOIRE S'EMBRASSE AVEC L'OCEAN, UN PORT DE CHARME OU CHAQUE RUE RACONTE SON RECIT SECULAIRE.<span class="quoteR">&ldquo;</span></h1>
+    <section class="description container-fluid d-flex text-white flex-row text-center">
+        <h1 class="d-flex"><span class="quoteG position-relative">&ldquo;</span> PERLE MARTIME OU L'HISTOIRE S'EMBRASSE AVEC L'OCEAN, UN PORT DE CHARME OU CHAQUE RUE RACONTE SON RECIT SECULAIRE.<span class="quoteR">&ldquo;</span></h1>
     </section>
     <!-- -->
     <article class="container-main offset-md-1 mt-5">

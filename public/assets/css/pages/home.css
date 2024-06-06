@@ -1,59 +1,37 @@
-.container-header {
-    height: 80vh;
-}
-
-.container-header {
-    height: 80vh;
-}
-
-.container-header .block-text{
-    background-color: #0077BE;
-    width: 685px;
-    height: 348px;
-}
-
-.container-header .block-text h2{
-    color: white;
-    font-size: 50px;
-}
-
-.container-header .block-image img{
-    width: 850px;
-    height: 450px;
-    z-index: 2;
-    margin-top: -150px;
-}
-
-.main-home .container-description {
+.app-bg {
     background-color: var(--acc-color);
-    color: white;
+    padding: 2rem;
 }
 
-.main-home .container-description h1 {
-    margin: 8rem 4rem;
+.app-bg h1 {
+    margin-bottom: 4rem;
 }
 
-.main-home .container-description h1 .quoteG, .quoteR {
-    font-size: 5em;
-    display: flex;
-    font-family: 'Roboto', sans-serif;
-    max-height: 100px;
+.presentation img{
+    transform: translateX(25vw);
+    top: -7rem;
 }
 
-.main-home .container-description h1 .quoteG {
-    margin-left: -3rem;
-
-.container-main .main-title h2{
-    color: #0077BE;
-    font-size: 40px;
+.description {
+    background-color: var(--acc-color);
+    padding: 12rem 4rem;
 }
 
-.main-home .container-description h1 .quoteR {
+.description span {
+    font-size: 8rem;
+    font-family: "roboto", sans-serif;
+}
+
+.description h1 .quoteG, .quoteR  {
+    height: 50px;
+    position: relative;
+}
+
+.description h1 .quoteR {
+    bottom: -8rem;
     transform: scaleX(-1);
-    margin-right: -3rem;
-}
-.main-slider .container-slider-cards .slider-card {
-    width: 350px;
-    height: 400px;
 }
 
+.description h1 .quoteG {
+    top: -3rem;
+}
