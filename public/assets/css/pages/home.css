@@ -1,3 +1,29 @@
+.container-header {
+    height: 80vh;
+}
+
+.container-header {
+    height: 80vh;
+}
+
+.container-header .block-text{
+    background-color: #0077BE;
+    width: 685px;
+    height: 348px;
+}
+
+.container-header .block-text h2{
+    color: white;
+    font-size: 50px;
+}
+
+.container-header .block-image img{
+    width: 850px;
+    height: 450px;
+    z-index: 2;
+    margin-top: -150px;
+}
+
 .main-home .container-description {
     background-color: var(--acc-color);
     color: white;
@@ -16,9 +42,17 @@
 
 .main-home .container-description h1 .quoteG {
     margin-left: -3rem;
+.container-main .main-title h2{
+    color: #0077BE;
+    font-size: 40px;
 }
 
 .main-home .container-description h1 .quoteR {
     transform: scaleX(-1);
     margin-right: -3rem;
 }
+.main-slider .container-slider-cards .slider-card {
+    width: 350px;
+    height: 400px;
+}
+
