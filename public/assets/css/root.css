@@ -1,0 +1,24 @@
+:root {
+    --acc-color: #0077BE;
+    --salmon: #F4A866;
+}
+
+.textAccent {
+    color: var(--acc-color);
+}
+
+.accent {
+    background-color: var(--acc-color);
+}
+
+.textSalmon {
+    color: #F4A866;
+}
+
+.salmon {
+    background-color: #F4A866;
+}
+
+.borderSalmon {
+    border-color: #F4A866;
+}
