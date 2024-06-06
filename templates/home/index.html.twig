@@ -3,18 +3,120 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<main class="main-home">
+    <article class="container-header">
+        <div class="block-text">
+            <h2>LA ROCHELLE une ville d’histoire et d’activités</h2>
+        </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+        <div class="block-image">
+             <img src="{{ asset('/assets/images/home/image 4.png') }}" alt="Home image">
+        </div>
+    </article>
+    <!-- -->
+    <section class="container-description">
+        <h1>PERLE MARTIME OU L'HISTOIRE S'EMBRASSE AVEC L'OCEAN, UN PORT DE CHARME OU CHAQUE RUE RACONTE SON RECIT SECULAIRE.
+    </section>
+    <!-- -->
+    <article class="container-main">
+        <div class="main-title">
+            <h2>La Rochelle en activités</h2>
+        </div>
+        <!-- -->
+        <div class="main-slider">
+            <div class="container-slider-cards">
+                <div class="slider-card">
+                    <div class="slider-img">
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/davgu/OneDrive/Bureau/Tourisme/tourisme/src/Controller/HomeController.php</code></li>
-        <li>Your template at <code>C:/Users/davgu/OneDrive/Bureau/Tourisme/tourisme/templates/home/index.html.twig</code></li>
-    </ul>
-</div>
+                    </div>
+
+                    <div class="slider-text">
+                        <a>Activités Sportives</a>
+                    </div>
+                </div>
+
+                <div class="slider-card">
+                    <div class="slider-img">
+
+                    </div>
+
+                    <div class="slider-text">
+                        <a>Visites</a>
+                    </div>
+                </div>
+
+                <div class="slider-card">
+                    <div class="slider-img">
+
+                    </div>
+
+                    <div class="slider-text">
+                         <a>Découverte Historique</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- -->
+        <div class="main-title">
+            <h2>La cuisine Rochelaise et ses produits locaux</h2>
+        </div>
+
+        <div class="main-carousel">
+            <div class="button-left-arrow">
+
+            </div>
+
+             <div class="container-carousel">
+                <div class="image-carousel">
+
+                </div>
+
+                <div class="description-carousel">
+                     <a>Les 4 Sergents</a>
+                </div>
+            </div>
+
+             <div class="button-right-arrow">
+            
+            </div>
+        </div>
+
+    </article>
+
+    <article class="containert-event">
+        <div class="event-title">
+            <h3>Spectales et festivals</h3>
+            <h2>EVENEMENT MAJEURS</h2>
+            <hr></hr>
+        </div>
+
+        <div class="event-roadmap">
+
+        </div>
+
+    </article>
+
+    <!-- -->
+    <article class="container-logement">
+        <div class="title-logement">
+            <h2>BESOIN D'UN LOGEMENT</h2>
+            <h3>Voici notre Séléction !</h3>
+        </div>
+
+        <div class="container-owl-carousel-logement">
+            <h2>La Rochelle <span>/ Hotel Atlantic</span></h2>
+            <div class="owl-carousel-logement">
+                <div> Image </div>
+            </div>
+        </div>
+    </article>
+</main>
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(document).ready(function(){
+        $(".owl-carousel").owlCarousel();
+        });
+    </script>
 {% endblock %}
