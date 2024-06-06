@@ -1,10 +1,29 @@
-Projet TOURISME :
+# Projet TOURISME :
 
-3 groupes : 1. HTML/CSS + Responsive :      Fatima, Leo, Miriam
-            2. Back-Office Php/Symfony :    Jérémy, Maxime, Pierre
-            3. Base des Données :           Antoine, Frédéric, Yoann
+| Groupe                          | Membres                   |
+|---------------------------------|---------------------------|
+| **HTML/CSS + Responsive**       | Fatima, Leo, Miriam       |
+| **Back-Office Php/Symfony**     | Jérémy, Maxime, Pierre    |
+| **Base des Données**            | Antoine, Frédéric, Yoann  |
 
-Créer le répertoire du projet :
-symfony new tourisme -webapp
 
-Créer Github             
+**Cloner le projet**
+```git clone https://github.com/Moyna17k/tourisme.git```
+
+**Se déplacer dans le répertoire du projet**
+```cd tourisme```
+
+**Installer les dépendances avec Composer**
+```composer install```
+
+**Copier le fichier de configuration d'environnement et le modifier**
+```cp .env .env.local```
+```nano .env  ( Ou utilisez l'éditeur de votre choix pour modifier le fichier )```
+
+**Na pas oublier de faire les migrations**
+```php bin/console doctrine:migration:migrate```
+
+**Démarrer le serveur de développement Symfony**
+```symfony serve -d```
+
+

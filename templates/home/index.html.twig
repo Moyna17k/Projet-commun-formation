@@ -3,95 +3,169 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-<main class="main-home">
-    <article class="container-header">
-        <div class="block-text">
-            <h2>LA ROCHELLE une ville d’histoire et d’activités</h2>
-        </div>
-
-        <div class="block-image">
-             <img src="{{ asset('/assets/images/home/image 4.png') }}" alt="Home image">
-        </div>
+<main class="container-fluid g-0">
+    <article class="container mt-5 pt-5">
+            <div class="presentation d-flex flex-column justify-content-center align-items-center">
+                <div class="textContainer col-6 position-relative text-white app-bg">
+                    <h1> LA ROCHELLE
+                        <br>
+                        UNE VILLE D'HISTOIRE
+                        <br>
+                        ET D'ACTIVITES</h1>
+                </div>
+                <div class="position-relative col-6 imgContainer">
+                    <img src="{{ asset('/assets/images/home/image 4.png') }}" class="img-fluid" alt="Home image">
+                </div>
+            </div>
     </article>
+
     <!-- -->
-    <section class="container-description">
-        <h1>PERLE MARTIME OU L'HISTOIRE S'EMBRASSE AVEC L'OCEAN, UN PORT DE CHARME OU CHAQUE RUE RACONTE SON RECIT SECULAIRE.
+    <section class="description container-fluid d-flex text-white flex-row text-center">
+        <h1 class="d-flex"><span class="quoteG position-relative">&ldquo;</span> PERLE MARTIME OU L'HISTOIRE S'EMBRASSE AVEC L'OCEAN, UN PORT DE CHARME OU CHAQUE RUE RACONTE SON RECIT SECULAIRE.<span class="quoteR">&ldquo;</span></h1>
     </section>
     <!-- -->
-    <article class="container-main">
+
+    <article class="activitesContainer">
         <div class="main-title">
             <h2>La Rochelle en activités</h2>
         </div>
-        <!-- -->
-        <div class="main-slider">
-            <div class="container-slider-cards">
-                <div class="slider-card">
-                    <div class="slider-img">
-
-                    </div>
-
-                    <div class="slider-text">
-                        <a>Activités Sportives</a>
-                    </div>
+        <div class="card-slider d-flex flex-row justify-content-center gap-4">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body card-bg text-center text-white">
+                    <h5 class="card-title">Card title</h5>
                 </div>
-
-                <div class="slider-card">
-                    <div class="slider-img">
-
-                    </div>
-
-                    <div class="slider-text">
-                        <a>Visites</a>
-                    </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body card-bg text-center text-white">
+                    <h5 class="card-title">Card title</h5>
                 </div>
-
-                <div class="slider-card">
-                    <div class="slider-img">
-
-                    </div>
-
-                    <div class="slider-text">
-                         <a>Découverte Historique</a>
-                    </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body card-bg text-center text-white">
+                    <h5 class="card-title">Card title</h5>
                 </div>
             </div>
         </div>
+    </article>
+        <!-- -->
+
+        <article class="container-main mt-5 d-flex flex-column justify-content-center align-items-center">
         <!-- -->
         <div class="main-title">
-            <h2>La cuisine Rochelaise et ses produits locaux</h2>
+            <h2 class="textAccent">La cuisine Rochelaise et ses produits locaux</h2>
         </div>
 
-        <div class="main-carousel">
-            <div class="button-left-arrow">
-
-            </div>
-
-             <div class="container-carousel">
-                <div class="image-carousel">
-
+            <div id="carouselExampleCaptions" class="carousel slide col-9">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{ asset('/assets/images/home/image 4.png') }}" class="d-block w-100" alt="...">
+                        <div class="d-flex flex-column justify-content-center align-items-center mt-3 gap-3">
+                            <h4 class="text-center textAccent">BONSOIR</h4>
+                            <a href="" class="btn btn-primary px-5 py-3 accent"> VOIR </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('/assets/images/home/image 4.png') }}" class="d-block w-100" alt="...">
+                        <div class="d-flex flex-column justify-content-center align-items-center mt-3 gap-3">
+                            <h4 class="text-center textAccent">BONSOIR</h4>
+                            <a href="" class="btn btn-primary px-5 py-3 accent"> VOIR </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('/assets/images/home/image 4.png') }}" class="d-block w-100" alt="...">
+                        <div class="d-flex flex-column justify-content-center align-items-center mt-3 gap-3">
+                            <h4 class="text-center textAccent">BONSOIR</h4>
+                            <a href="" class="btn btn-primary px-5 py-3 accent"> VOIR </a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="description-carousel">
-                     <a>Les 4 Sergents</a>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-
-             <div class="button-right-arrow">
-            
-            </div>
-        </div>
 
     </article>
 
-    <article class="containert-event">
-        <div class="event-title">
-            <h3>Spectales et festivals</h3>
-            <h2>EVENEMENT MAJEURS</h2>
-            <hr></hr>
+    <article class="container-fluid accent mt-5 pb-5 d-flex flex-column justify-content-center align-items-center">
+        <div class="mt-5 text-center">
+            <h3 class="textSalmon">Spectales et festivals</h3>
+            <h2 class="text-white border-bottom border-3 pb-2 borderSalmon px-2">EVENEMENT MAJEURS</h2>
         </div>
 
-        <div class="event-roadmap">
+        <div class="roadmap container d-flex row mt-5 g-0 justify-content-center align-items-center">
+            <div class="col-4"></div>
+            <div class="col-1 d-flex flex-column justify-content-center align-items-center">
+                <div class="frisePin bg-white d-grid"><i class="textSalmon bi bi-plus"></i></div>
+                <div class="friseLink text-white"><hr class="opacity-100"></div>
+            </div>
+            <div class="roadmapItemLeft col-4">
+                <div class="roadmapItem row g-0 bg-white textSalmon">
+                    <h3 class="textAccent">FESTIVAL INTERNATIONAL DU FILM</h3>
+                    <section class="d-flex flex-row col-11 justify-content-between position-absolute">
+                        <a class="btn px-3 salmon text-white">VOIR PLUS</a>
+                        <span>01/01/2024</span>
+                    </section>
+                </div>
+            </div>
+        </div>
 
+        <div class="roadmap container d-flex row g-0 justify-content-center align-items-center">
+            <div class="roadmapItemRight col-4">
+                <div class="roadmapItem row g-0 bg-white d-flex justify-content-end textSalmon">
+                    <h3 class="textAccent col-11 text-end">FESTIVAL INTERNATIONAL</h3>
+                    <section class="d-flex flex-row col-11 justify-content-between position-absolute">
+                        <span>01/01/2024</span>
+                        <a class="btn px-3 salmon text-white">VOIR PLUS</a>
+                    </section>
+                </div>
+            </div>
+            <div class="col-1 d-flex flex-column justify-content-center align-items-center">
+                <div class="frisePin bg-white d-grid"><i class="textSalmon bi bi-plus"></i></div>
+                <div class="friseLink text-white"><hr class="opacity-100"></div>
+            </div>
+            <div class="col-4"></div>
+        </div>
+
+        <div class="roadmap container d-flex row g-0 justify-content-center align-items-center">
+            <div class="col-4"></div>
+            <div class="col-1 d-flex flex-column justify-content-center align-items-center">
+                <div class="frisePin bg-white d-grid"><i class="textSalmon bi bi-plus"></i></div>
+                <div class="friseLink text-white"><hr class="opacity-100"></div>
+            </div>
+            <div class="roadmapItemLeft col-4">
+                <div class="roadmapItem row g-0 bg-white textSalmon">
+                    <h3 class="textAccent">FESTIVAL INTERNATIONAL DU FILM</h3>
+                    <section class="d-flex flex-row col-11 justify-content-between position-absolute">
+                        <a class="btn px-3 salmon text-white">VOIR PLUS</a>
+                        <span>01/01/2024</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="roadmap container d-flex row g-0 justify-content-center align-items-center">
+            <div class="roadmapItemRight col-4">
+                <div class="roadmapItem row g-0 bg-white d-flex justify-content-end textSalmon">
+                    <h3 class="textAccent col-11 text-end">FESTIVAL INTERNATIONAL DU CHIBRE</h3>
+                    <section class="d-flex flex-row col-11 justify-content-between position-absolute">
+                        <span>01/01/2024</span>
+                        <a class="btn px-3 salmon text-white">VOIR PLUS</a>
+                    </section>
+                </div>
+            </div>
+            <div class="col-1 d-flex flex-column justify-content-center align-items-center">
+                <div class="frisePin bg-white d-grid"><i class="textSalmon bi bi-plus"></i></div>
+                <div class="friseLink text-white"><hr class="opacity-100"></div>
+            </div>
+            <div class="col-4"></div>
         </div>
 
     </article>
