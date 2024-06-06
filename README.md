@@ -17,7 +17,7 @@
 ```composer install```
 
 **Copier le fichier de configuration d'environnement et le modifier**
-```cp .env.dist .env```
+```cp .env .env.local```
 ```nano .env  ( Ou utilisez l'éditeur de votre choix pour modifier le fichier )```
 
 **Na pas oublier de faire les migrations**
