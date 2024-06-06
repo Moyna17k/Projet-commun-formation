@@ -1,12 +1,32 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: red;
+.container-header {
+    height: 80vh;
 }
 
-h1 {
-    color: #333;
+.container-header .block-text{
+    background-color: #0077BE;
+    width: 685px;
+    height: 348px;
 }
 
-p {
-    color: #666;
+.container-header .block-text h2{
+    color: white;
+    font-size: 50px;
 }
+
+.container-header .block-image img{
+    width: 850px;
+    height: 450px;
+    z-index: 2;
+    margin-top: -150px;
+}
+
+.container-main .main-title h2{
+    color: #0077BE;
+    font-size: 40px;
+}
+
+.main-slider .container-slider-cards .slider-card {
+    width: 350px;
+    height: 400px;
+}
+
