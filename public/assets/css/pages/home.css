@@ -127,3 +127,66 @@
     border-bottom: 15px solid transparent;
     transform: translate(-80%, 17%);
 }
+
+.hotelContainer .title h2 {
+    font-size: 2.4em;
+    font-weight: 300;
+}
+
+.hotelContainer .title h3 {
+    font-weight: 300;
+    margin: 0;
+}
+
+.hotelContainer .title i {
+    font-size: 4em;
+    transform: rotate(90deg);
+}
+
+.hotelDescContainer .title {
+    text-align: start;
+}
+
+.hotelDescContainer .title h2 {
+    color: #7D7D7D;
+    font-size: 1.4em;
+}
+
+.hotelDesc .hotelTags span {
+    border-radius: 5px;
+}
+
+.hotelDesc .prix span {
+    border-radius: 6px;
+}
+
+.hotelDesc .elements span {
+    background: #525252;
+    border-radius: 20px;
+}
+
+.hotelDesc .elements span a {
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+}
+
+.hotelContainer .carousel .carouselHotelPrev, .carouselHotelNext {
+    font-size: 4em;
+}
+
+.hotelContainer .hotelWrapper .hotelDesc {
+    box-sizing: border-box;
+}
+
+.hotelContainer .carousel .carouselHotelPrev {
+    left: -5rem;
+    border: none;
+    background: transparent;
+}
+
+.hotelContainer .carousel .carouselHotelNext {
+    right: -5rem;
+    border: none;
+    background: transparent;
+}
