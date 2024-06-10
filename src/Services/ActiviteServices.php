@@ -35,13 +35,11 @@ class ActiviteServices
         
             $nomCompletArray[] = [
                 'nom_complet' => $value['nom_complet'],
-                'nombre_etablissements_ouverts' => $value['nombre_etablissements_ouverts'],
-                'adresse' => $Adresse,
             ];
         
             $count++; // Incrémenter la variable de comptage
         
-            if ($count == 8) {
+            if ($count == 3) {
                 break; // Arrêter la boucle après avoir ajouté 15 éléments
             }
         }

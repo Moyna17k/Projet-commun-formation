@@ -16,7 +16,7 @@ class SpectacleController extends AbstractController
     public function index(): Response
     {
         return $this->render('spectacle/index.html.twig', [
-            'spectacle' => $this->spectacle->spectacle(),
+            'spectacle' => $this->spectacle->full(),
         ]);
     }
 }
