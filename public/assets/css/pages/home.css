@@ -98,6 +98,10 @@
     font-size: 1.5rem;
 }
 
+.roadmapItem .btn:hover {
+    background-color: var(--salmon);
+}
+
 .roadmap .roadmapItemRight .roadmapItem:before {
     content: "";
     position: absolute;
