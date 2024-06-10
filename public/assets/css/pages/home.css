@@ -53,7 +53,7 @@
     color: var(--acc-color);
 }
 
-.frisePin {
+.roadmap .frisePin {
     place-items: center;
     border-radius: 50%;
     aspect-ratio: 1/1;
@@ -63,25 +63,25 @@
     position: relative;
 }
 
-.frisePin i {
+.roadmap .frisePin i {
     font-size: 4em;
     position: absolute;
 }
 
-.friseLink {
+.roadmap .friseLink {
     display: flex;
     align-items: center;
     height: 10rem;
 }
 
-.friseLink hr {
+.roadmap .friseLink hr {
     transform: rotate(90deg);
     border-width: .8rem;
     width: 11rem;
     border-radius: 5rem;
 }
 
-.roadmapItem {
+.roadmap .roadmapItem {
     border-radius: 8px;
     height: 200px;
     top: -10%;
@@ -90,15 +90,15 @@
     padding: 1rem;
 }
 
-.roadmapItem section {
+.roadmap .roadmapItem section {
     bottom: 1rem;
 }
 
-.roadmapItem section span {
+.roadmap .roadmapItem section span {
     font-size: 1.5rem;
 }
 
-.roadmapItemRight .roadmapItem:before {
+.roadmap .roadmapItemRight .roadmapItem:before {
     content: "";
     position: absolute;
     top: 0;
@@ -111,7 +111,7 @@
     transform: translate(80%, 17%);
 }
 
-.roadmapItemLeft .roadmapItem:before {
+.roadmap .roadmapItemLeft .roadmapItem:before {
     content: "";
     position: absolute;
     top: 0;
