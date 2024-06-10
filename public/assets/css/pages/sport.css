@@ -1,5 +1,10 @@
 .sportCards a {
     text-decoration: none;
+    box-shadow: 0 0 15px 1px #9F9F9F;
+}
+
+.sportCards a .card-body {
+    border-radius: 0 0 5px 5px;
 }
 
 .sportContainer .title {
