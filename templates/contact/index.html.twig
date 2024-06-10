@@ -1,65 +1,76 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Contact{% endblock %}
-
-{% block body %}
-    <div class="container mt-5">
-        
-        <div class="card">
-
-        <h1 class="mb-4">Contactez-nous</h1>
-
-            <div class="card-body">
-                {{ form_start(form, {'attr': {'class': 'needs-validation', 'novalidate': ''}}) }}
-
-                    <div class="form-group mb-3">
-                        {{ form_label(form.nom) }}
-                        {{ form_widget(form.nom, {'attr': {'class': 'form-control', 'placeholder': 'Votre nom'}}) }}
-                        <div class="invalid-feedback">
-                            {{ form_errors(form.nom) }}
-                        </div>
-                    </div>
-
-                    <div class="form-group mb-3">
-                        {{ form_label(form.prenom) }}
-                        {{ form_widget(form.prenom, {'attr': {'class': 'form-control', 'placeholder': 'Votre prénom'}}) }}
-                        <div class="invalid-feedback">
-                            {{ form_errors(form.prenom) }}
-                        </div>
-                    </div>
-
-                    <div class="form-group mb-3">
-                        {{ form_label(form.email) }}
-                        {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'Votre email'}}) }}
-                        <div class="invalid-feedback">
-                            {{ form_errors(form.email) }}
-                        </div>
-                    </div>
-
-                    <div class="form-group mb-3">
-                        {{ form_label(form.sujet) }}
-                        {{ form_widget(form.sujet, {'attr': {'class': 'form-control', 'placeholder': 'Sujet'}}) }}
-                        <div class="invalid-feedback">
-                            {{ form_errors(form.sujet) }}
-                        </div>
-                    </div>
-
-                    <div class="form-group mb-3">
-                        {{ form_label(form.message) }}
-                        {{ form_widget(form.message, {'attr': {'class': 'form-control', 'placeholder': 'Votre message'}}) }}
-                        <div class="invalid-feedback">
-                            {{ form_errors(form.message) }}
-                        </div>
-                    </div>
-
-                    <div class="form-group mb-3">
-                        {{ form_widget(form.envoyer, {'attr': {'class': 'btn btn-primary'}}) }}
-                    </div>
-
-                {{ form_end(form) }}
-
-            </div>
-        </div>
-    </div>
+{% block title %}Contact
 {% endblock %}
 
+{% block body %}
+	<div class="container mt-5">
+
+		<div class="card-body">
+
+			<h1 class="mb-4">Contactez-nous</h1>
+
+			{{ form_start(form, {'attr': {'class': 'needs-validation', 'novalidate': ''}}) }}
+
+			<i class="bi bi-geo-alt-fill"></i>
+			<span class="form-group">1 rue de la Paix, 17000 La Rochelle</span><br>
+
+			<i class="bi bi-envelope "></i>
+			<span class="form-group">Tourisme@gmail.com</span><br>
+
+			<i class="bi bi-instagram"></i>
+			<span class="form-group">TourismeLaRochelle</span><br>
+
+			<i class="bi bi-twitter-x"></i>
+			<span class="form-group">TourismeLR</span><br>
+
+			<div class="form-group mb-3">
+				{{ form_label(form.nom) }}
+				{{ form_widget(form.nom, {'attr': {'class': 'form-control', 'placeholder': 'Votre nom'}}) }}
+				<div class="invalid-feedback">
+					{{ form_errors(form.nom) }}
+				</div>
+			</div>
+
+			<div class="form-group mb-3">
+				{{ form_label(form.prenom) }}
+				{{ form_widget(form.prenom, {'attr': {'class': 'form-control', 'placeholder': 'Votre prénom'}}) }}
+				<div class="invalid-feedback">
+					{{ form_errors(form.prenom) }}
+				</div>
+			</div>
+
+			<div class="form-group mb-3">
+				{{ form_label(form.email) }}
+				{{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'Votre email'}}) }}
+				<div class="invalid-feedback">
+					{{ form_errors(form.email) }}
+				</div>
+			</div>
+
+			<div class="form-group mb-3">
+				{{ form_label(form.message) }}
+				{{ form_widget(form.message, {'attr': {'class': 'form-control', 'placeholder': 'Votre message'}}) }}
+				<div class="invalid-feedback">
+					{{ form_errors(form.message) }}
+				</div>
+			</div>
+
+			<div class="form-group mb-3">
+				{{ form_widget(form.envoyer, {'attr': {'class': 'btn btn-primary'}}) }}
+			</div>
+
+			{{ form_end(form) }}
+
+		</div>
+
+	</div>
+
+	<div class="containerText mt-3">
+		<p>En tant qu'Office de Tourisme, nous sommes profondément engagés en faveur de la préservation de notre <span class="bi">environnement local</span>. Nous croyons fermement que le tourisme peut être une force positive, contribuant à la protection de notre planète tout en offrant des expériences enrichissantes. 
+			Des escapades eco-friendly aux initiatives communautaires respectueuses de l'environnement, nous mettons en avant des expériences de voyage qui célèbrent la beauté de notre région tout en minimisant notre impact écologique. 
+			De la découverte de sentiers préservés à la dégustation de produits locaux, chaque suggestion que nous partageons vise à inspirer des voyages durables. En choisissant de suivre nos conseils, vous contribuez à promouvoir un tourisme responsable et à préserver la splendeur naturelle de notre cher département.
+		</p>
+	</div>
+
+{% endblock %}
