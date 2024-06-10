@@ -1,6 +1,7 @@
 :root {
     --acc-color: #0077BE;
     --salmon: #F4A866;
+    --sand: #DFB652;
 }
 
 .textAccent {
@@ -21,4 +22,12 @@
 
 .borderSalmon {
     border-color: #F4A866;
+}
+
+.textSand {
+    color: #DFB652;
+}
+
+.sand {
+    background-color: #DFB652;
 }

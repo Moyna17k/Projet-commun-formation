@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} name {% endblock %}
+
+{% block body %}
+    <main class="container-fluid g-0">
+        <section class="sportContainer container-fluid g-0 accent position-relative">
+            <div class="title sand text-white col-3 py-2 px-5 position-absolute">
+                <h3 class="col-1">NOS Clubs Sportifs</h3>
+            </div>
+            <img class="img-fluid" src="{{ asset('assets/images/sport/sport2.png') }}" alt="sport2">
+        </section>
+
+        <section class="sportList container my-5 d-flex flex-column gap-4 col-10 ">
+            <div class="listItem p-4 d-flex flex-row textAccent align-items-center">
+                <div class="imgContainer col-5">
+                    <img class="img-fluid" src="{{ asset('assets/images/sport/sport3.png') }}" alt="">
+                </div>
+                <div class="textWrapper d-flex mx-5 flex-column">
+                    <div class="">
+                        <h3>club1</h3>
+                        <span>club de sport</span>
+                    </div>
+                    <div class="textContainer d-flex flex-column justify-content-start">
+                        <p class="my-3"><span>Description : </span>Description</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="listItem p-4 d-flex flex-row textAccent align-items-center">
+                <div class="imgContainer col-5">
+                    <img class="img-fluid" src="{{ asset('assets/images/sport/sport3.png') }}" alt="">
+                </div>
+                <div class="textWrapper d-flex mx-5 flex-column">
+                    <div class="">
+                        <h3>club1</h3>
+                        <span>club de sport</span>
+                    </div>
+                    <div class="textContainer d-flex flex-column justify-content-start">
+                        <p class="my-3"><span>Description : </span>Description</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="listItem p-4 d-flex flex-row textAccent align-items-center">
+                <div class="imgContainer col-5">
+                    <img class="img-fluid" src="{{ asset('assets/images/sport/sport3.png') }}" alt="">
+                </div>
+                <div class="textWrapper d-flex mx-5 flex-column">
+                    <div class="">
+                        <h3>club1</h3>
+                        <span>club de sport</span>
+                    </div>
+                    <div class="textContainer d-flex flex-column justify-content-start">
+                        <p class="my-3"><span>Description : </span>Description</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="listItem p-4 d-flex flex-row textAccent align-items-center">
+                <div class="imgContainer col-5">
+                    <img class="img-fluid" src="{{ asset('assets/images/sport/sport3.png') }}" alt="">
+                </div>
+                <div class="textWrapper d-flex mx-5 flex-column">
+                    <div class="">
+                        <h3>club1</h3>
+                        <span>club de sport</span>
+                    </div>
+                    <div class="textContainer d-flex flex-column justify-content-start">
+                        <p class="my-3"><span>Description : </span>Description</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+{% endblock %}

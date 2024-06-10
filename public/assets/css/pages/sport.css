@@ -1,0 +1,25 @@
+.sportCards a {
+    text-decoration: none;
+}
+
+.sportContainer .title {
+    top: 0;
+    left: 4rem;
+}
+
+.sportContainer .title h3 {
+    font-weight: 200;
+    margin: 0;
+}
+
+.sportList .listItem {
+    border-radius: 5px;
+    box-shadow: 0 0 15px 1px #9F9F9F;
+}
+
+.sportList .listItem .textWrapper h3 {
+    margin: 0;
+}
+
+.sportList .listItem .textContainer p {;
+}
