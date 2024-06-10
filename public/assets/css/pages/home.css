@@ -53,7 +53,7 @@
     color: var(--acc-color);
 }
 
-.frisePin {
+.roadmap .frisePin {
     place-items: center;
     border-radius: 50%;
     aspect-ratio: 1/1;
@@ -63,25 +63,25 @@
     position: relative;
 }
 
-.frisePin i {
+.roadmap .frisePin i {
     font-size: 4em;
     position: absolute;
 }
 
-.friseLink {
+.roadmap .friseLink {
     display: flex;
     align-items: center;
     height: 10rem;
 }
 
-.friseLink hr {
+.roadmap .friseLink hr {
     transform: rotate(90deg);
     border-width: .8rem;
     width: 11rem;
     border-radius: 5rem;
 }
 
-.roadmapItem {
+.roadmap .roadmapItem {
     border-radius: 8px;
     height: 200px;
     top: -10%;
@@ -90,15 +90,19 @@
     padding: 1rem;
 }
 
-.roadmapItem section {
+.roadmap .roadmapItem section {
     bottom: 1rem;
 }
 
-.roadmapItem section span {
+.roadmap .roadmapItem section span {
     font-size: 1.5rem;
 }
 
-.roadmapItemRight .roadmapItem:before {
+.roadmapItem .btn:hover {
+    background-color: var(--salmon);
+}
+
+.roadmap .roadmapItemRight .roadmapItem:before {
     content: "";
     position: absolute;
     top: 0;
@@ -111,7 +115,7 @@
     transform: translate(80%, 17%);
 }
 
-.roadmapItemLeft .roadmapItem:before {
+.roadmap .roadmapItemLeft .roadmapItem:before {
     content: "";
     position: absolute;
     top: 0;
@@ -122,4 +126,67 @@
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
     transform: translate(-80%, 17%);
+}
+
+.hotelContainer .title h2 {
+    font-size: 2.4em;
+    font-weight: 300;
+}
+
+.hotelContainer .title h3 {
+    font-weight: 300;
+    margin: 0;
+}
+
+.hotelContainer .title i {
+    font-size: 4em;
+    transform: rotate(90deg);
+}
+
+.hotelDescContainer .title {
+    text-align: start;
+}
+
+.hotelDescContainer .title h2 {
+    color: #7D7D7D;
+    font-size: 1.4em;
+}
+
+.hotelDesc .hotelTags span {
+    border-radius: 5px;
+}
+
+.hotelDesc .prix span {
+    border-radius: 6px;
+}
+
+.hotelDesc .elements span {
+    background: #525252;
+    border-radius: 20px;
+}
+
+.hotelDesc .elements span a {
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+}
+
+.hotelContainer .carousel .carouselHotelPrev, .carouselHotelNext {
+    font-size: 4em;
+}
+
+.hotelContainer .hotelWrapper .hotelDesc {
+    box-sizing: border-box;
+}
+
+.hotelContainer .carousel .carouselHotelPrev {
+    left: -5rem;
+    border: none;
+    background: transparent;
+}
+
+.hotelContainer .carousel .carouselHotelNext {
+    right: -5rem;
+    border: none;
+    background: transparent;
 }
