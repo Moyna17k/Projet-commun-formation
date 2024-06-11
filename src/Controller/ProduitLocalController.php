@@ -19,4 +19,16 @@ class ProduitLocalController extends AbstractController
             'produits' => $produits,
         ]);
     }
+
+    #[Route('/produitlocal/{slug}', name: 'app_produit_local_{slug}')]
+    public function produitCategory(
+        string $slug,
+        ProduitsRepository $produit
+    ): Response
+    {
+        $items = $produit->findBy(['slug' => $slug]);
+        return $this->render('produit_local/category.html.twig', [
+            'items' => $items,
+        ]);
+    }
 }

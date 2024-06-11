@@ -19,4 +19,16 @@ class ModeController extends AbstractController
             'modes' => $modes,
         ]);
     }
+
+    #[Route('/mode/{slug}', name: 'app_mode_{slug}')]
+    public function modeCategory(
+        string $slug,
+        ModeRepository $mode
+    ): Response
+    {
+        $items = $mode->findBy(['slug' => $slug]);
+        return $this->render('produit_local/category.html.twig', [
+            'items' => $items,
+        ]);
+    }
 }
