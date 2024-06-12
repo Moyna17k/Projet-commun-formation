@@ -2,6 +2,10 @@
 
 {% block title %}Hello SpectacleController!{% endblock %}
 
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+{% endblock %}
+
 {% block body %}
 <main>
     
@@ -14,11 +18,11 @@
            </ol>
         <div class="carousel-inner" role="listbox">
              <div class="eve"><h1> Découvrez ce que La Rochelle a à offrir !</h1></div>
-             <div class="carousel-item active" style="background-image: url('../image/vieuport.jpeg')">
+             <div class="carousel-item active" style="background-image: url('{{ asset('assets/images/vieuport.jpeg') }}')">
              </div>
-             <div class="carousel-item " style="background-image: url('../image/concert.JPG')">
+             <div class="carousel-item " style="background-image: url('{{ asset('assets/images/concert.JPG') }}')">
              </div>
-             <div class="carousel-item " style="background-image: url('../image/francolarochelle.webp')">
+             <div class="carousel-item " style="background-image: url('{{ asset('assets/images/francolarochelle.webp') }}')">
              </div>
         </div>
 
@@ -42,7 +46,7 @@
 <div class="content">
  <div class="grid">
  <figure class="effect-zoe">
-   <img src="../image/francolarochelle.webp" alt="img26"/>
+   <img src="{{ asset('assets/images/francolarochelle.webp') }}" alt="img26"/>
    <figcaption>
        <h2>Franco  <span>folies</span></h2>
        <p class="icon-links">
@@ -54,7 +58,7 @@
    </figcaption>			
 </figure>
 <figure class="effect-zoe">
-  <img src="../image/filmfestiv.jpg" alt="img26"/>
+  <img src="{{ asset('assets/images/filmfestiv.jpg') }}" alt="img26"/>
   <figcaption>
       <h2>Film <span> Festival</span></h2>
       <p class="icon-links">
@@ -66,7 +70,7 @@
   </figcaption>			
 </figure>
 <figure class="effect-zoe">
-  <img src="../image/la rochelle night.jpg" alt="img26"/>
+  <img src="{{ asset('assets/images/la rochelle night.jpg') }}" alt="img26"/>
   <figcaption>
       <h2> Vieux <span> Port</span></h2>
       <p class="icon-links">
@@ -78,7 +82,7 @@
   </figcaption>			
 </figure>
 <figure class="effect-zoe">
-  <img src="../image/la rochhelle port.webp" alt="img26"/>
+  <img src="{{ asset('assets/images/la rochhelle port.webp') }}" alt="img26"/>
   <figcaption>
       <h2>La Roche <span>lle</span></h2>
       <p class="icon-links">
@@ -90,7 +94,7 @@
   </figcaption>			
 </figure>
 <figure class="effect-zoe">
-  <img src="../image/cinema.jpg" alt="img26"/>
+  <img src="{{ asset('assets/images/cinema.jpg') }}" alt="img26"/>
   <figcaption>
       <h2>Cine <span>ma</span></h2>
       <p class="icon-links">
@@ -102,7 +106,7 @@
   </figcaption>			
 </figure>
 <figure class="effect-zoe">
-  <img src="../image/ima-patrimoine-maritime-fete-maritime-44436 - Copy.webp" alt="img26"/>
+  <img src="{{ asset('assets/images/ima-patrimoine-maritime-fete-maritime-44436.webp') }}" alt="img26"/>
   <figcaption>
       <h2>Fic <span>tion</span></h2>
       <p class="icon-links">
@@ -114,7 +118,7 @@
   </figcaption>			
 </figure>
 <figure class="effect-zoe">
-  <img src="../image/la rochelle night.jpg" alt="img26"/>
+  <img src="{{ asset('assets/images/la rochelle night.jpg') }}" alt="img26"/>
   <figcaption>
       <h2>Mara <span>thon</span></h2>
       <p class="icon-links">
@@ -126,7 +130,7 @@
   </figcaption>			
 </figure>
 <figure class="effect-zoe">
-  <img src="../image/larochelle01.jpg" alt="img26"/>
+  <img src="{{ asset('assets/images/larochelle01.jpg') }}" alt="img26"/>
   <figcaption>
       <h2>Dan <span>ce</span></h2>
       <p class="icon-links">
@@ -138,7 +142,7 @@
   </figcaption>			
 </figure>
 <figure class="effect-zoe">
-  <img src="grandpavois.jpg" alt="img26"/>
+  <img src="{{ asset('assets/images/grandpavois.jpg') }}" alt="img26"/>
   <figcaption>
       <h2>Grand <span>pavois</span></h2>
       <p class="icon-links">
@@ -166,19 +170,19 @@
     <section>
       <div class="different"> 
            <div class="event">
-               <img src="../image/marata.jpg" alt="marathon" onclick="myfunction"> Marathon
+               <img src="{{ asset('assets/images/marata.jpg') }}" alt="marathon" onclick="myfunction"> Marathon
                <div class="Overlay"> <p> Il est l'un des marathons français les plus importants en nombre de participants, avec 5 564 participants ayant terminé la course en 2016 </p>
                </div> 
                <div class="Details"> <a href="#Plus">Voir plus </a></div>
            </div>
            <div class="event">
-            <img src="../image/MUS - Copy.JPG" alt="marathon" onclick="myfunction">  Muséum D`Histoire
+            <img src="{{ asset('assets/images/MUS.JPG') }}" alt="marathon" onclick="myfunction">  Muséum D`Histoire
             <div class="Overlay"> <p> Fabuleux voyage au cœur des collections naturalistes et ethnographiques rapportées du monde entier. </p>
             </div>
             <div class="Details"> <a href="https://museum.larochelle.fr/">Voir plus </a></div> 
        </div>
         <div class="event">
-            <img src="../image/dance for you.JPG" alt="Dance For You" onclick="myfunction"> Dance For You
+            <img src="{{ asset('assets/images/dance for you.JPG') }}" alt="Dance For You" onclick="myfunction"> Dance For You
             <div class="Overlay"> <p> 26 March 
               Discover Solène Watcher. For you/Not For You is a Solo that can be read in both directions. Using a bifrontal det-up  </p>
             </div> 
@@ -186,7 +190,7 @@
        </div>
   
     <div class="event">
-        <img src="../image/concert.JPG" alt="marathon" onclick="myfunction"> Marathon
+        <img src="{{ asset('assets/images/concert.JPG') }}" alt="marathon" onclick="myfunction"> Marathon
         <div class="Overlay"> <p> Il est l'un des marathons français les plus importants en nombre de participants, avec 5 564 participants ayant terminé la course en 2016 </p>
         </div> 
         <div class="Details"> <a href="#Plus">Voir plus </a></div>

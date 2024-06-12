@@ -2,10 +2,14 @@
 
 {% block title %}Activite{% endblock %}
 
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('assets/css/act.css') }}">
+{% endblock %}
+
 {% block body %}
 <main>
      <div class="hd mt-4">
-        <img src="../image/port.jpg" alt="">
+        <img src="{{ asset('assets/images/port.jpg') }}" class="img-fluid" alt="">
     </div>
     
    
@@ -33,7 +37,7 @@
             </div>
             
             <div class="centre mt-4">
-                <img src="../image/aqqqq.jpg" class="img-fluid" alt="">
+                <img src="{{ asset('assets/images/aqqqq.jpg') }}" class="img-fluid" alt="">
             </div>
 
             <div class="activities">
