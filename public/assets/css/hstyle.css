@@ -1,0 +1,74 @@
+@media only screen and (max-width: 680px) {
+   
+}
+.intro img {
+    height: 700px;
+    width: 1400px;
+}
+.card-img-overlay{
+    color: white;
+    text-align: center;
+    font: 1.3em sans-serif;
+    width: 600px;
+    margin-top: 300px;
+    margin-left: 370px;
+   
+}
+.container {
+    background-color: #3674ba;
+    color: black;
+    height: 500px;
+   
+}
+.container h4 {
+    text-align: center;
+    color: white;
+}
+.col {
+    background-color: #DFB652;
+    height: 310px;
+    margin-left: 50px;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 5%;
+}
+.choice{
+    text-align: center;
+
+}
+.siecle {
+    margin-left: 130px;
+}
+.container2 {
+    margin-top: 30px;
+    text-align: center;
+    height: 400px;
+    width: 70%;
+    border-radius: 4%;
+    margin-left: 200px;
+    background-color: #3674ba;
+}
+
+.container2 img {
+width: 150px;
+height: 100px;
+
+}
+.book{
+    margin-top: 70px;
+}
+.hotel {
+    width: 20%;
+    height: 60%;
+    margin-top: 50px;
+    margin-left: 90px;
+    padding: 20px;
+    border-radius: 5%;
+    background-color: #EBC975;
+   
+   
+}
+.location {
+    text-align: center;
+    margin-top: 60px;
+}

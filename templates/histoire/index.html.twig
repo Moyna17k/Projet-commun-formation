@@ -3,18 +3,68 @@
 {% block title %}Hello HistoireController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<main>
+     <div class="intro">
+        <img src="../image/noireblanc.jpg" class="img-fluid" alt="">
+        <div class="card-img-overlay"><p>Plongez dans l'histoire captivante de La Rochelle,
+            une ville portuaire empreinte de siècles d'aventures maritimes, de fortifications médiévales,
+            et de récits fascinants qui se dévoilent à chaque coin de rue,
+            offrant aux visiteurs une expérience mémorable au cœur d'un patrimoine riche et vibrant.</p></div>
+    </div>
+    <div class="siecle mt-4">
+        <img src="../image/ScreeHIS.png" class="img-fluid" alt="">
+    </div>
+    <div class="container">
+        <h4> Les batiments historiques de La Rochelle </h4>
+        <div class="d-flex mt-4">
+            <div class="col p-4">
+                <h5> Les tours </h5>
+               <a href=""> <img src="../image/tours.jpg" class="img-fluid" alt=""></a>
+                <p>Découvrez l’histoire des tours de La Rochelle, dressées majestueusement sur le Vieux-Port</p>
+            </div>
+            <div class="col p-4">
+                <h5> Grosse Horloge </h5>
+               <a href=""> <img src="../image/grossehorloge.pg.jpg" class="img-fluid" alt=""></a>
+              <p>  Le joyau du patrimoine de La Rochelle , trône au-dessus de l'entrée du Vieux-Port.</p> 
+            </div>
+            <div class="col p-4">
+                <h5> Hotel de ville </h5>
+                <a href=""><img src="../image/hoteldeville.jpg" class="img-fluid" alt=""></a>
+               <p>L'Hôtel de Ville de La Rochelle, édifice imposant et empreint d'histoire sur la place de l'Hôtel de Ville.</p> 
+            </div>
+            <div class="col p-4">
+                <h5> Hotel la bourse </h5>
+                <a href=""><img src="../image/bourse.jpg" class="img-fluid" alt=""></a>
+               <p> L'Hôtel de la Bourse de La Rochelle, évoque la grandeur passée en bordure du Vieux-Port.</p>
+            </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+        </div>
+      </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/davgu/OneDrive/Bureau/Tourisme/tourisme/src/Controller/HistoireController.php</code></li>
-        <li>Your template at <code>C:/Users/davgu/OneDrive/Bureau/Tourisme/tourisme/templates/histoire/index.html.twig</code></li>
-    </ul>
-</div>
+               <div class="book">
+            <div class="choice mt-4"><h4> Choissisez votre hôtel pour voir ces batiments de vos propre yeux </h4></div>
+            <div class="container2 d-flex">
+            <div class="hotel p-4">
+                <h5> Hotel Saint-Nicolas </h5>
+                <a href=""><img src="../image/hoteldeville.jpg" class="img-fluid" alt=""></a>
+               <p>13 Rue Sardinerie, 17000 La Rochelle</p> 
+            </div>
+            <div class="hotel p-4">
+                <h5> Hotel de ville </h5>
+                <a href=""><img src="../image/bourse.jpg" class="img-fluid" alt=""></a>
+               <p>13 Rue Sardinerie, 17000 La Rochelle</p> 
+            </div>
+            <div class="hotel p-4">
+                <h5> Hotel Saint-Nicolas </h5>
+                <a href=""><img src="../image/hoteldevillehist.webp" class="img-fluid" alt=""></a>
+               <p>13 Rue Sardinerie, 17000 La Rochelle</p> 
+            </div>
+        </div>
+    
+    </div>
+    <div class="location p-4">
+    <h5>Voici un chemin pour tout voir à partir de l’hôtel sélectionné</h5>
+    <iframe src="https://www.google.com/maps/d/embed?mid=1E2ovDcepQZXIJW4fzH1Fg_qIsGsbC50&ehbc=2E312F" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" frameborder="0"></iframe>
+    </div>
+</main>
 {% endblock %}
