@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HebergementController!{% endblock %}
+
+{% block body %}
+
+<section class="hotelContainer container-fluid g-0 my-5 position-relative">
+    <div class="title container-fluid d-flex justify-content-center align-items-center position-absolute top-50 ">
+        <h1 class="text-white">HÔTELS</h1>
+    </div>
+    <img class="img-fluid w-100" src="{{ asset('assets/images/hebergement/imghotel.png') }}" alt="hotel" >
+</section>
+
+<section class="row mx-3">
+    <aside class="col-3 container">
+        <form>
+            <section class="container accent text-white py-1 rounded ">
+                <div class="tarfis my-5">
+                    <h2>TARIFS</h2>
+                    <input type="range" class="form-range" id="customRange1">
+                </div>
+
+                <div class="notes my-5">
+                    <h2>NOTES</h2>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <h5>1 étoile</h5>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <h5>2 étoile</h5>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <h5>3 étoile</h5>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <h5>4 étoile</h5>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="services my-5">
+                    <h2>SERVICES</h2>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <h5>Animaux bienvenus</h5>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <h5>Accès PMR</h5>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <h5>Restauration</h5>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <h5>Parking privé</h5>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="langues my-5">
+                    <h2>LANGUES</h2>
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <h5>Anglais</h5>
+                        </label>
+                    </div>
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <h5>Allemagne</h5>
+                        </label>
+                    </div>
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <h5>Espagnol</h5>
+                        </label>
+                    </div>
+                </div>
+
+            </section>
+        </form>
+    </aside>
+
+    <main class="col-9 container">
+        <article>
+            <div>
+                <h2>test</h2>
+            </div>
+        </article>
+    </main>
+</section>
+
+{% endblock %}

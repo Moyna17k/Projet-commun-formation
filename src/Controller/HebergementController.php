@@ -28,4 +28,12 @@ class HebergementController extends AbstractController
             'hotel' => $this->hotel->hotel()
         ]); 
     }
+
+    #[Route('/hebergement/mapheber', name: 'app_map_hebergement')]
+    public function map(): Response
+    {
+        return $this->render('hebergement/mapheber.html.twig', [
+            'hotel' => $this->hotel->hotel()
+        ]); 
+    }
 }
