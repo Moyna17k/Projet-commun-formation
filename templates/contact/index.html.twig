@@ -1,65 +1,94 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Contact{% endblock %}
-
-{% block body %}
-    <div class="container mt-5">
-        
-        <div class="card">
-
-        <h1 class="mb-4">Contactez-nous</h1>
-
-            <div class="card-body">
-                {{ form_start(form, {'attr': {'class': 'needs-validation', 'novalidate': ''}}) }}
-
-                    <div class="form-group mb-3">
-                        {{ form_label(form.nom) }}
-                        {{ form_widget(form.nom, {'attr': {'class': 'form-control', 'placeholder': 'Votre nom'}}) }}
-                        <div class="invalid-feedback">
-                            {{ form_errors(form.nom) }}
-                        </div>
-                    </div>
-
-                    <div class="form-group mb-3">
-                        {{ form_label(form.prenom) }}
-                        {{ form_widget(form.prenom, {'attr': {'class': 'form-control', 'placeholder': 'Votre prénom'}}) }}
-                        <div class="invalid-feedback">
-                            {{ form_errors(form.prenom) }}
-                        </div>
-                    </div>
-
-                    <div class="form-group mb-3">
-                        {{ form_label(form.email) }}
-                        {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'Votre email'}}) }}
-                        <div class="invalid-feedback">
-                            {{ form_errors(form.email) }}
-                        </div>
-                    </div>
-
-                    <div class="form-group mb-3">
-                        {{ form_label(form.sujet) }}
-                        {{ form_widget(form.sujet, {'attr': {'class': 'form-control', 'placeholder': 'Sujet'}}) }}
-                        <div class="invalid-feedback">
-                            {{ form_errors(form.sujet) }}
-                        </div>
-                    </div>
-
-                    <div class="form-group mb-3">
-                        {{ form_label(form.message) }}
-                        {{ form_widget(form.message, {'attr': {'class': 'form-control', 'placeholder': 'Votre message'}}) }}
-                        <div class="invalid-feedback">
-                            {{ form_errors(form.message) }}
-                        </div>
-                    </div>
-
-                    <div class="form-group mb-3">
-                        {{ form_widget(form.envoyer, {'attr': {'class': 'btn btn-primary'}}) }}
-                    </div>
-
-                {{ form_end(form) }}
-
-            </div>
-        </div>
-    </div>
+{% block title %}Contact
 {% endblock %}
 
+{% block body %}
+
+	<div class="container-fluid p-0" style="background-image: url('/assets/images/home/backgroundplan.png');">
+		<div class="container d-flex justify-content-center align-items-center py-5" style="height: 100vh;">
+			<div class="card bg-primary text-white shadow-lg p-4 rounded" style="width: 100%; max-width: 400px;">
+				<h1 class="mb-4 text-center bg-primary p-2 rounded">Contactez-nous</h1>
+
+				{{ form_start(form, {'attr': {'class': 'needs-validation', 'novalidate': ''}}) }}
+
+				<div class="mb-3">
+					<i class="bi bi-geo-alt-fill sandColor"></i>
+					<span class="fw-bold">1 rue de la Paix, 17000 La Rochelle</span>
+				</div>
+
+				<div class="mb-3">
+					<i class="bi bi-envelope sandColor"></i>
+					<span class="fw-bold">Tourisme@gmail.com
+					</div>
+
+					<div class="mb-3">
+						<i class="bi bi-instagram sandColor"></i>
+						<span class="fw-bold">TourismeLaRochelle</span>
+					</div>
+
+					<div class="mb-3">
+						<i class="bi bi-twitter sandColor"></i>
+						<span class="fw-bold">TourismeLR</span>
+					</div>
+
+					<div class="form-group mb-3">
+						{{ form_label(form.nom) }}
+						{{ form_widget(form.nom, {'attr': {'class': 'form-control', 'placeholder': 'Votre nom'}}) }}
+						<div class="invalid-feedback">
+							{{ form_errors(form.nom) }}
+						</div>
+					</div>
+
+					<div class="form-group mb-3">
+						{{ form_label(form.prenom) }}
+						{{ form_widget(form.prenom, {'attr': {'class': 'form-control', 'placeholder': 'Votre prénom'}}) }}
+						<div class="invalid-feedback">
+							{{ form_errors(form.prenom) }}
+						</div>
+					</div>
+
+					<div class="form-group mb-3">
+						{{ form_label(form.email) }}
+						{{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'Votre email'}}) }}
+						<div class="invalid-feedback">
+							{{ form_errors(form.email) }}
+						</div>
+					</div>
+
+					<div class="form-group mb-3">
+						{{ form_label(form.message) }}
+						{{ form_widget(form.message, {'attr': {'class': 'form-control', 'placeholder': 'Votre message'}}) }}
+						<div class="invalid-feedback">
+							{{ form_errors(form.message) }}
+						</div>
+					</div>
+
+					<div class="form-group d-flex justify-content-center">
+						{{ form_widget(form.envoyer, {'attr': {'class': 'btn custom-btn'}}) }}
+					</div>
+
+
+					{{ form_end(form) }}
+				</div>
+			</div>
+		</div>
+
+		<div class="containerText p-2">
+			<div class="bg-primary text-white p-4 shadow-lg rounded">
+				<p>
+					En tant qu'Office de Tourisme, nous sommes profondément engagés en faveur de la préservation de notre
+					<span class="sandColor fw-bold">environnement local</span>. Nous croyons fermement que le tourisme peut être une force positive, contribuant à la protection de notre planète tout en offrant des expériences enrichissantes. 
+												            Des
+					<span class="sandColor fw-bold">escapades eco-friendly</span>
+					aux initiatives communautaires respectueuses de l'environnement, nous mettons en avant des expériences de voyage qui célèbrent la beauté de notre région
+					<span class="sandColor fw-bold">tout en minimisant notre impact écologique</span>. 
+												            De la découverte de sentiers préservés à la dégustation de produits locaux, chaque suggestion que nous partageons vise à inspirer des
+					<span class="sandColor fw-bold">voyages durables</span>. En choisissant de suivre nos conseils, vous contribuez à promouvoir un
+					<span class="sandColor fw-bold">tourisme responsable</span>
+					et à préserver la splendeur naturelle de notre cher département.
+				</p>
+			</div>
+		</div>
+
+	{% endblock %}

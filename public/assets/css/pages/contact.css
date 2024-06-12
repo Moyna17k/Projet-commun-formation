@@ -1,0 +1,16 @@
+.sandColor {
+    color: #EED8A2 !important;
+}
+
+/* Custom button */
+
+.custom-btn {
+    background-color: #EED8A2;
+    color: white;
+    font-weight: bold;
+}
+
+.custom-btn:hover {
+    background-color: #EED8A2;
+    color: #0D6EFD;
+}

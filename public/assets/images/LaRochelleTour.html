@@ -1,14 +1,55 @@
-{% extends 'base.html.twig' %}
 
-{% block title %}Hello SpectacleController!{% endblock %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,800,300' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Spectacles et Événements - La Rochelle</title>
+   
+</head>
+<body>
 
-{% block css %}
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-{% endblock %}
-
-{% block body %}
-<main>
-    
+    <header>
+      <nav class="my-nav">
+        <div class="topnav">
+            <a href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about" class="split"onclick="myFunction()"><i class="fa fa-bars"> </i></a>
+          </div> 
+    </nav>
+        <div class="Menu">
+          <a href="javascript:void(0);" class="iconmenu" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+        <div class="Links" id="myLinks">
+          <ul>
+         <li> <a href="#Informations">Informations</a></li>
+         <li> <a href="#"> Agenda</a></li>
+         <li> <a href="#Experience">Experience</a></li>
+         <li> <a href="#Guide">Guide</a></li>
+         <li> <a href="#" id="close"><span onclick="document.getElementById('myLinks').style.display='none'" 
+          class="w3-button w3-display-topright"> Fermer le menu</span></a></div></li>
+          </ul>
+        </div>
+        </div>
+       </div>
+    </nav>
+  
       <div id="carouselExampleIndicators" class="carousel slide my-carousel my-carousel" data-ride="carousel">
         
             <ol class="carousel-indicators">
@@ -18,11 +59,11 @@
            </ol>
         <div class="carousel-inner" role="listbox">
              <div class="eve"><h1> Découvrez ce que La Rochelle a à offrir !</h1></div>
-             <div class="carousel-item active" style="background-image: url('{{ asset('assets/images/vieuport.jpeg') }}')">
+             <div class="carousel-item active" style="background-image: url('vieuport.jpeg')">
              </div>
-             <div class="carousel-item " style="background-image: url('{{ asset('assets/images/concert.JPG') }}')">
+             <div class="carousel-item " style="background-image: url('concert.JPG')">
              </div>
-             <div class="carousel-item " style="background-image: url('{{ asset('assets/images/francolarochelle.webp') }}')">
+             <div class="carousel-item " style="background-image: url('francolarochelle.webp')">
              </div>
         </div>
 
@@ -46,7 +87,7 @@
 <div class="content">
  <div class="grid">
  <figure class="effect-zoe">
-   <img src="{{ asset('assets/images/francolarochelle.webp') }}" alt="img26"/>
+   <img src="francolarochelle.webp" alt="img26"/>
    <figcaption>
        <h2>Franco  <span>folies</span></h2>
        <p class="icon-links">
@@ -58,7 +99,7 @@
    </figcaption>			
 </figure>
 <figure class="effect-zoe">
-  <img src="{{ asset('assets/images/filmfestiv.jpg') }}" alt="img26"/>
+  <img src="filmfestiv.jpg" alt="img26"/>
   <figcaption>
       <h2>Film <span> Festival</span></h2>
       <p class="icon-links">
@@ -70,7 +111,7 @@
   </figcaption>			
 </figure>
 <figure class="effect-zoe">
-  <img src="{{ asset('assets/images/la rochelle night.jpg') }}" alt="img26"/>
+  <img src="la rochelle night.jpg" alt="img26"/>
   <figcaption>
       <h2> Vieux <span> Port</span></h2>
       <p class="icon-links">
@@ -82,7 +123,7 @@
   </figcaption>			
 </figure>
 <figure class="effect-zoe">
-  <img src="{{ asset('assets/images/la rochhelle port.webp') }}" alt="img26"/>
+  <img src="la rochhelle port.webp" alt="img26"/>
   <figcaption>
       <h2>La Roche <span>lle</span></h2>
       <p class="icon-links">
@@ -94,7 +135,7 @@
   </figcaption>			
 </figure>
 <figure class="effect-zoe">
-  <img src="{{ asset('assets/images/cinema.jpg') }}" alt="img26"/>
+  <img src="cinema.jpg" alt="img26"/>
   <figcaption>
       <h2>Cine <span>ma</span></h2>
       <p class="icon-links">
@@ -106,7 +147,7 @@
   </figcaption>			
 </figure>
 <figure class="effect-zoe">
-  <img src="{{ asset('assets/images/ima-patrimoine-maritime-fete-maritime-44436.webp') }}" alt="img26"/>
+  <img src="fiction.JPG" alt="img26"/>
   <figcaption>
       <h2>Fic <span>tion</span></h2>
       <p class="icon-links">
@@ -118,7 +159,7 @@
   </figcaption>			
 </figure>
 <figure class="effect-zoe">
-  <img src="{{ asset('assets/images/la rochelle night.jpg') }}" alt="img26"/>
+  <img src="la.webp" alt="img26"/>
   <figcaption>
       <h2>Mara <span>thon</span></h2>
       <p class="icon-links">
@@ -130,7 +171,7 @@
   </figcaption>			
 </figure>
 <figure class="effect-zoe">
-  <img src="{{ asset('assets/images/larochelle01.jpg') }}" alt="img26"/>
+  <img src="larochelle01.jpg" alt="img26"/>
   <figcaption>
       <h2>Dan <span>ce</span></h2>
       <p class="icon-links">
@@ -142,7 +183,7 @@
   </figcaption>			
 </figure>
 <figure class="effect-zoe">
-  <img src="{{ asset('assets/images/grandpavois.jpg') }}" alt="img26"/>
+  <img src="grandpavois.jpg" alt="img26"/>
   <figcaption>
       <h2>Grand <span>pavois</span></h2>
       <p class="icon-links">
@@ -170,19 +211,19 @@
     <section>
       <div class="different"> 
            <div class="event">
-               <img src="{{ asset('assets/images/marata.jpg') }}" alt="marathon" onclick="myfunction"> Marathon
+               <img src="marata.jpg" alt="marathon" onclick="myfunction"> Marathon
                <div class="Overlay"> <p> Il est l'un des marathons français les plus importants en nombre de participants, avec 5 564 participants ayant terminé la course en 2016 </p>
                </div> 
                <div class="Details"> <a href="#Plus">Voir plus </a></div>
            </div>
            <div class="event">
-            <img src="{{ asset('assets/images/MUS.JPG') }}" alt="marathon" onclick="myfunction">  Muséum D`Histoire
+            <img src="MUS.JPG" alt="marathon" onclick="myfunction">  Muséum D`Histoire
             <div class="Overlay"> <p> Fabuleux voyage au cœur des collections naturalistes et ethnographiques rapportées du monde entier. </p>
             </div>
             <div class="Details"> <a href="https://museum.larochelle.fr/">Voir plus </a></div> 
        </div>
         <div class="event">
-            <img src="{{ asset('assets/images/dance for you.JPG') }}" alt="Dance For You" onclick="myfunction"> Dance For You
+            <img src="dance for you.JPG" alt="Dance For You" onclick="myfunction"> Dance For You
             <div class="Overlay"> <p> 26 March 
               Discover Solène Watcher. For you/Not For You is a Solo that can be read in both directions. Using a bifrontal det-up  </p>
             </div> 
@@ -190,7 +231,7 @@
        </div>
   
     <div class="event">
-        <img src="{{ asset('assets/images/concert.JPG') }}" alt="marathon" onclick="myfunction"> Marathon
+        <img src="concert.JPG" alt="marathon" onclick="myfunction"> Marathon
         <div class="Overlay"> <p> Il est l'un des marathons français les plus importants en nombre de participants, avec 5 564 participants ayant terminé la course en 2016 </p>
         </div> 
         <div class="Details"> <a href="#Plus">Voir plus </a></div>
@@ -202,5 +243,46 @@
 
         <iframe src="https://www.google.com/maps/d/embed?mid=1E2ovDcepQZXIJW4fzH1Fg_qIsGsbC50&ehbc=2E312F" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" frameborder="0"></iframe>
       
-</main>
-{% endblock %}
+    <footer>
+      <div class="sponsor">
+        <ul>
+            <li> <img src="logo_la_rochelle.png" alt=""></li>
+            <li><img src="logo-cda.svg" alt=""></li>
+            <li><img src="infiniment-charentes-logo.svg" alt=""></li>
+            <li><img src="logo charente.svg" alt=""></li>
+        </ul>
+
+      </div>
+      <div class="icon">
+        
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-snapchat"></i></a>
+        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+      </div>
+        <div><p>&copy; 2024 La Rochelle </p></div>
+    </footer>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  
+<script>
+    
+
+    function myFunction() {
+          var x = document.getElementById("myLinks");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+     
+        }
+</script>
+
+
+</html>
