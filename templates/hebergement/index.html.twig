@@ -3,4 +3,63 @@
 {% block title %}Hello HebergementController!{% endblock %}
 
 {% block body %}
+
+<article class="container-fluid g-0 hotelContainer my-5">
+            <section class="hotelContainer container-fluid g-0 my-5 position-relative">
+                <div class="title container-fluid d-flex justify-content-center align-items-center position-absolute top-50 ">
+                    <h1 class="text-white">HÔTELS</h1>
+                </div>
+                <img class="img-fluid w-100" src="{{ asset('assets/images/hebergement/imghotel.png') }}" alt="hotel" >
+            </section>
+
+            <div class="container">
+                <div id="carouselHotels" class="carousel slide position-relative d-flex flex-column justify-content-center align-items-center">
+                    <div class="carousel-inner">
+                        {% for h in hotel %}
+                            <div class="carousel-item {% if loop.first %}active{% endif %}">
+                                <div class="hotelDescContainer d-flex flex-column justify-content-center align-items-center">
+                                    <div class="container title mb-2">
+                                        <h2>La Rochelle <span class="textAccent">/ {{ h.nom_complet }} </span></h2>
+                                    </div>
+                                    <div class="hotelDescWrapper row d-flex flex-row justify-content-center align-items-start">
+                                        <div class="col-6">
+                                            <img src="{{ asset('/assets/images/home/image 4.png') }}" class="img-fluid" alt="...">
+                                        </div>
+                                        <div class="col-6 hotelDesc d-flex flex-column gap-3">
+                                            <div class="hotelTags">
+                                                <span class="accent px-3 py-1 text-white">HOTEL</span>
+                                                <span class="accent px-3 py-1 text-white">EMPLACEMENT</span>
+                                            </div>
+                                            <h4 class="textAccent">{{ h.nom_complet }}</h4>
+                                            <div class="note">4,2 (121)</div>
+                                            <div class="elements">
+                                                <span class="text-white py-1 px-2"><a href="#"><i class="bi bi-globe2"></i><span class="mx-2">SITE WEB</span></a></span>
+                                                <span class="text-white py-1 px-2"><a href="#"><i class="bi bi-cursor"></i><span class="mx-2">ITINERAIRE</span></a></span>
+                                                <span class="text-white py-1 px-2"><a href="#"><i class="bi bi-telephone"></i><span class="mx-2">TELEPHONE</span></a></span>
+                                            </div>
+                                            <div class="textDesc">Hotel simple avec jardin interieur</div>
+                                            <div class="infos">
+                                                <span><i class="bi bi-car-front-fill"></i><span class="mx-2">Parking gratuit</span></span>
+                                                <span><i class="bi bi-wifi"></i><span class="mx-2">Wi-Fi gratuit</span></span>
+                                            </div>
+                                            <div class="prix">
+                                                <span class="accent text-white py-1 px-2">85 $</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <button class="carouselHotelPrev position-absolute textAccent" type="button" data-bs-target="#carouselHotels" data-bs-slide="prev">
+                        <span class="bi bi-chevron-left" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carouselHotelNext position-absolute textAccent" type="button" data-bs-target="#carouselHotels" data-bs-slide="next">
+                        <span class="bi bi-chevron-right" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </article>
 {% endblock %}

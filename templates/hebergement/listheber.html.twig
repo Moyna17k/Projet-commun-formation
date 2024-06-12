@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HebergementController!{% endblock %}
+
+{% block body %}
+<article class="container-fluid g-0 my-5">
+            <section class="container-fluid g-0 my-5 position-relative">
+                <div class="title container-fluid d-flex justify-content-center align-items-center position-absolute top-50 ">
+                    <h1 class="text-white">Où Séjourner ?</h1>
+                </div>
+                <img class="img-fluid w-100" src="{{ asset('assets/images/hebergement/hebergement.png') }}" alt="hebergement">
+            </section>
+
+            <div class="container text-center">
+                <div class="row row-cols-3">
+                    <div class="col">HÔTELS</div>
+                    <div class="col">CAMPINGS</div>
+                    <div class="col">AIRES-CAMPING CAR</div>
+                    <div class="col">CHAMBRES D'HOTE</div>
+                    <div class="col">GÎTES</div>
+                    <div class="col">AUBERGE DE JEUNESSE</div>
+                </div>
+            </div>
+</article>
+
+{% endblock %}
