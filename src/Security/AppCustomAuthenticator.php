@@ -28,10 +28,13 @@ class AppCustomAuthenticator extends AbstractLoginFormAuthenticator
 
     public function authenticate(Request $request): Passport
     {
+        // Retrieve email from the request payload
         $email = $request->getPayload()->getString('email');
 
+        // Store the last username (email) in the session
         $request->getSession()->set(SecurityRequestAttributes::LAST_USERNAME, $email);
 
+        // Create and return a Passport object with the required credentials and badges
         return new Passport(
             new UserBadge($email),
             new PasswordCredentials($request->getPayload()->getString('password')),
@@ -44,17 +47,13 @@ class AppCustomAuthenticator extends AbstractLoginFormAuthenticator
 
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, string $firewallName): ?Response
     {
-        if ($targetPath = $this->getTargetPath($request->getSession(), $firewallName)) {
-            return new RedirectResponse($targetPath);
-        }
-
-        // For example:
-        // return new RedirectResponse($this->urlGenerator->generate('some_route'));
-        throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
+        // Redirect to the login page upon successful authentication
+        return new RedirectResponse($this->getLoginUrl($request));
     }
 
     protected function getLoginUrl(Request $request): string
     {
+        // Generate and return the login URL
         return $this->urlGenerator->generate(self::LOGIN_ROUTE);
     }
 }

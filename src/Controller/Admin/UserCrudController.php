@@ -3,39 +3,58 @@
 namespace App\Controller\Admin;
 
 use App\Entity\User;
-use EasyCorp\Bundle\EasyAdminBundle\Config\{Action, Actions, Crud, KeyValueStore};
+use App\Security\Voter\BlogPostVoter;
+use Symfony\Bundle\SecurityBundle\Security;
+use EasyCorp\Bundle\EasyAdminBundle\Dto\EntityDto;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ArrayField;
+use Symfony\Component\Security\Http\Attribute\IsGranted;
 use EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
-use EasyCorp\Bundle\EasyAdminBundle\Dto\EntityDto;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
+use Symfony\Component\Form\{FormBuilderInterface, FormEvent, FormEvents};
 use EasyCorp\Bundle\EasyAdminBundle\Field\{IdField, EmailField, TextField};
 use Symfony\Component\Form\Extension\Core\Type\{PasswordType, RepeatedType};
-use Symfony\Component\Form\{FormBuilderInterface, FormEvent, FormEvents};
-use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
+use EasyCorp\Bundle\EasyAdminBundle\Config\{Action, Actions, Crud, KeyValueStore};
+
 
 class UserCrudController extends AbstractCrudController
 {
+    
     public function __construct(
-        private UserPasswordHasherInterface $userPasswordHasher
-    ) {}
+        private UserPasswordHasherInterface $userPasswordHasher,
+        private Security $security
+        ) {
+            $this->security = $security;
+    }
 
     public static function getEntityFqcn(): string
     {
         return User::class;
     }
 
+
     public function configureActions(Actions $actions): Actions
     {
-        return $actions
-            ->add(Crud::PAGE_EDIT, Action::INDEX)
-            ->add(Crud::PAGE_INDEX, Action::DETAIL)
-            ->add(Crud::PAGE_EDIT, Action::DETAIL);
-    }
+        
+        // Check if the user has the 'ROLE_BLOGUEUR'
+        if ($this->security->isGranted('ROLE_BLOGUEUR')) {
+            // Remove the NEW and EDIT actions for users with 'ROLE_BLOGUEUR'
+            $actions
+                ->remove(Crud::PAGE_INDEX, Action::EDIT)
+                ->remove(Crud::PAGE_INDEX, Action::NEW)
+                ->remove(Crud::PAGE_INDEX, Action::DELETE);
+        }
 
+        return $actions;
+    }
+    
     public function configureFields(string $pageName): iterable
     {
+          
         $fields = [
             IdField::new('id')->hideOnForm(),
             EmailField::new('email'),
+            ArrayField::new('roles'),
         ];
 
         $password = TextField::new('password')
