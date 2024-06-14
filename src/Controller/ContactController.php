@@ -31,7 +31,6 @@ class ContactController extends AbstractController
             $email = (new TemplatedEmail())
                 ->from($formData['email'])
                 ->to('votre@email.com')
-                ->subject($formData['sujet'])
                 ->text($formData['message'])
                 ->priority(Email::PRIORITY_HIGH)
                 ->htmlTemplate('mail/contact.html.twig')

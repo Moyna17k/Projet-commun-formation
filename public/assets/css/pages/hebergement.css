@@ -1,0 +1,7 @@
+aside form {
+    top: 2rem;
+}
+
+article iframe {
+    pointer-events: none;
+}

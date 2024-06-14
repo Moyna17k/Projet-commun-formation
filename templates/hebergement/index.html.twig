@@ -3,4 +3,61 @@
 {% block title %}Hello HebergementController!{% endblock %}
 
 {% block body %}
+<article class="container-fluid g-0">
+            <section class="container-fluid g-0 mb-2 position-relative">
+                <div class="title container-fluid d-flex justify-content-center align-items-center position-absolute top-50 ">
+                    <h1 class="text-white">Où Séjourner ?</h1>
+                </div>
+                <img class="img-fluid w-100" src="{{ asset('assets/images/hebergement/hebergement.png') }}" alt="hebergement">
+            </section>
+
+            <div class="container text-center">
+                <div class="row row-cols-3">
+
+                    <div class="col my-3">
+                        <a href="https://youtu.be/dQw4w9WgXcQ" class="d-flex position-relative">
+                            <img class="img-fluid" src="{{ asset('assets/images/hebergement/hotel.png') }}" alt="hotel">
+                            <h2 class="text-black position-absolute bottom-0 mx-3 text-white">HÔTELS</h2>
+                        </a>
+                    </div>
+
+                    <div class="col my-3">
+                        <a href="https://youtu.be/dQw4w9WgXcQ" class="d-flex position-relative">
+                            <img class="img-fluid" src="{{ asset('assets/images/hebergement/camping.png') }}" alt="hotel">
+                            <h2 class="text-black position-absolute bottom-0 mx-3 text-white">CAMPING</h2>
+                        </a>
+                    </div>
+
+                    <div class="col my-3">
+                        <a href="https://youtu.be/dQw4w9WgXcQ" class="d-flex position-relative">
+                            <img class="img-fluid" src="{{ asset('assets/images/hebergement/airecamping.png') }}" alt="hotel">
+                            <h2 class="text-black position-absolute bottom-0 mx-3 text-white">AIRES CAMPING CAR</h2>
+                        </a>
+                    </div>
+
+                    <div class="col my-3">
+                        <a href="https://youtu.be/dQw4w9WgXcQ" class="d-flex position-relative">
+                            <img class="img-fluid" src="{{ asset('assets/images/hebergement/hote.png') }}" alt="hotel">
+                            <h2 class="text-black position-absolute bottom-0 mx-3 text-white">CHAMBRES D'HÔTE</h2>
+                        </a>
+                    </div>
+
+                    <div class="col my-3">
+                        <a href="https://youtu.be/dQw4w9WgXcQ" class="d-flex position-relative">
+                            <img class="img-fluid" src="{{ asset('assets/images/hebergement/gite.png') }}" alt="hotel">
+                            <h2 class="text-black position-absolute bottom-0 mx-3 text-white">GÎTES</h2>
+                        </a>
+                    </div>
+
+                    <div class="col my-3">
+                        <a href="https://youtu.be/dQw4w9WgXcQ" class="d-flex position-relative">
+                            <img class="img-fluid" src="{{ asset('assets/images/hebergement/auberge.png') }}" alt="hotel">
+                            <h2 class="text-black position-absolute bottom-0 mx-3 text-white">AUBERGES DE JEUNESSE</h2>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+</article>
+
 {% endblock %}
