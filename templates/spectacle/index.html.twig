@@ -2,19 +2,205 @@
 
 {% block title %}Hello SpectacleController!{% endblock %}
 
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+{% endblock %}
+
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<main>
+    
+      <div id="carouselExampleIndicators" class="carousel slide my-carousel my-carousel" data-ride="carousel">
+        
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+           </ol>
+        <div class="carousel-inner" role="listbox">
+             <div class="eve"><h1> Découvrez ce que La Rochelle a à offrir !</h1></div>
+             <div class="carousel-item active" style="background-image: url('{{ asset('assets/images/vieuport.jpeg') }}')">
+             </div>
+             <div class="carousel-item " style="background-image: url('{{ asset('assets/images/concert.JPG') }}')">
+             </div>
+             <div class="carousel-item " style="background-image: url('{{ asset('assets/images/francolarochelle.webp') }}')">
+             </div>
+        </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/davgu/OneDrive/Bureau/Tourisme/tourisme/src/Controller/SpectacleController.php</code></li>
-        <li>Your template at <code>C:/Users/davgu/OneDrive/Bureau/Tourisme/tourisme/templates/spectacle/index.html.twig</code></li>
-    </ul>
+        <div><a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="sr-only">Previous</span>
+              </a>
+             <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+             </a>
+        </div>
+    </div>
+  
+    </header>
+  
+  
+  <div class="title"><p >Spectacles et Événements à La Rochelle</p>
+  </div>
+</section>
+<div class="content">
+ <div class="grid">
+ <figure class="effect-zoe">
+   <img src="{{ asset('assets/images/francolarochelle.webp') }}" alt="img26"/>
+   <figcaption>
+       <h2>Franco  <span>folies</span></h2>
+       <p class="icon-links">
+           <a href="#"><span class="icon-heart"></span></a>
+           <a href="#"><span class="icon-eye"></span></a>
+           <a href="#"><span class="icon-paper-clip"></span></a>
+       </p>
+       <p class="description"> 40e edition des Francofolies de La Rochelle du 10 au 14 juillet</p>
+   </figcaption>			
+</figure>
+<figure class="effect-zoe">
+  <img src="{{ asset('assets/images/filmfestiv.jpg') }}" alt="img26"/>
+  <figcaption>
+      <h2>Film <span> Festival</span></h2>
+      <p class="icon-links">
+          <a href="#"><span class="icon-heart"></span></a>
+          <a href="#"><span class="icon-eye"></span></a>
+          <a href="#"><span class="icon-paper-clip"></span></a>
+      </p>
+      <p class="description">10/11/2024 - 17/11/2024 <br> Des films "en" et "hors" compétition à découvrir sur grand écran et en livres.</p>
+  </figcaption>			
+</figure>
+<figure class="effect-zoe">
+  <img src="{{ asset('assets/images/la rochelle night.jpg') }}" alt="img26"/>
+  <figcaption>
+      <h2> Vieux <span> Port</span></h2>
+      <p class="icon-links">
+          <a href="#"><span class="icon-heart"></span></a>
+          <a href="#"><span class="icon-eye"></span></a>
+          <a href="#"><span class="icon-paper-clip"></span></a>
+      </p>
+      <p class="description">Il se situe aux portes du centre historique de cette ville portuaire </p>
+  </figcaption>			
+</figure>
+<figure class="effect-zoe">
+  <img src="{{ asset('assets/images/la rochhelle port.webp') }}" alt="img26"/>
+  <figcaption>
+      <h2>La Roche <span>lle</span></h2>
+      <p class="icon-links">
+          <a href="#"><span class="icon-heart"></span></a>
+          <a href="#"><span class="icon-eye"></span></a>
+          <a href="#"><span class="icon-paper-clip"></span></a>
+      </p>
+      <p class="description">Zoe never had the patience of her sisters. She deliberately punched the bear in his face.</p>
+  </figcaption>			
+</figure>
+<figure class="effect-zoe">
+  <img src="{{ asset('assets/images/cinema.jpg') }}" alt="img26"/>
+  <figcaption>
+      <h2>Cine <span>ma</span></h2>
+      <p class="icon-links">
+          <a href="#"><span class="icon-heart"></span></a>
+          <a href="#"><span class="icon-eye"></span></a>
+          <a href="#"><span class="icon-paper-clip"></span></a>
+      </p>
+      <p class="description">Retrouvez toutes les séances de cinéma du CGR La Rochelle les Minimes (La Rochelle). </p>
+  </figcaption>			
+</figure>
+<figure class="effect-zoe">
+  <img src="{{ asset('assets/images/ima-patrimoine-maritime-fete-maritime-44436.webp') }}" alt="img26"/>
+  <figcaption>
+      <h2>Fic <span>tion</span></h2>
+      <p class="icon-links">
+          <a href="#"><span class="icon-heart"></span></a>
+          <a href="#"><span class="icon-eye"></span></a>
+          <a href="#"><span class="icon-paper-clip"></span></a>
+      </p>
+      <p class="description"> Les stars du petit écran ont rendez-vous jusqu’au dimanche 18 septembre sur le Vieux Port</p>
+  </figcaption>			
+</figure>
+<figure class="effect-zoe">
+  <img src="{{ asset('assets/images/la rochelle night.jpg') }}" alt="img26"/>
+  <figcaption>
+      <h2>Mara <span>thon</span></h2>
+      <p class="icon-links">
+          <a href="#"><span class="icon-heart"></span></a>
+          <a href="#"><span class="icon-eye"></span></a>
+          <a href="#"><span class="icon-paper-clip"></span></a>
+      </p>
+      <p class="description">l'un des marathons français les plus importants en nombre de participants <br> Le 24 Nov 2024</p>
+  </figcaption>			
+</figure>
+<figure class="effect-zoe">
+  <img src="{{ asset('assets/images/larochelle01.jpg') }}" alt="img26"/>
+  <figcaption>
+      <h2>Dan <span>ce</span></h2>
+      <p class="icon-links">
+          <a href="#"><span class="icon-heart"></span></a>
+          <a href="#"><span class="icon-eye"></span></a>
+          <a href="#"><span class="icon-paper-clip"></span></a>
+      </p>
+      <p class="description">Zoe never had the patience of her sisters. She deliberately punched the bear in his face.</p>
+  </figcaption>			
+</figure>
+<figure class="effect-zoe">
+  <img src="{{ asset('assets/images/grandpavois.jpg') }}" alt="img26"/>
+  <figcaption>
+      <h2>Grand <span>pavois</span></h2>
+      <p class="icon-links">
+          <a href="#"><span class="icon-heart"></span></a>
+          <a href="#"><span class="icon-eye"></span></a>
+          <a href="#"><span class="icon-paper-clip"></span></a>
+      </p>
+      <p class="description">Zoe never had the patience of her sisters. She deliberately punched the bear in his face.</p>
+  </figcaption>			
+</figure>
 </div>
+</div>
+<div class="chiffres">
+<div class="qlq"> <h2>Quelques chiffres</h2>
+</div>
+<div class="nombres"> <p>28 <br> <span>Années depuis lesquelles nous réalisons vos rêves</span> </p>
+</div>
+  <div class="nombres"> <p>250 <br> <span> Evénements réalisés en moyenne par an </span></p>
+  </div>
+    <div class="nombres"> <p>9600 <br> <span>m2 disponibles dispersés sur deux lieux emblématiques </span></p>
+</div>
+</div>
+
+
+    <section>
+      <div class="different"> 
+           <div class="event">
+               <img src="{{ asset('assets/images/marata.jpg') }}" alt="marathon" onclick="myfunction"> Marathon
+               <div class="Overlay"> <p> Il est l'un des marathons français les plus importants en nombre de participants, avec 5 564 participants ayant terminé la course en 2016 </p>
+               </div> 
+               <div class="Details"> <a href="#Plus">Voir plus </a></div>
+           </div>
+           <div class="event">
+            <img src="{{ asset('assets/images/MUS.JPG') }}" alt="marathon" onclick="myfunction">  Muséum D`Histoire
+            <div class="Overlay"> <p> Fabuleux voyage au cœur des collections naturalistes et ethnographiques rapportées du monde entier. </p>
+            </div>
+            <div class="Details"> <a href="https://museum.larochelle.fr/">Voir plus </a></div> 
+       </div>
+        <div class="event">
+            <img src="{{ asset('assets/images/dance for you.JPG') }}" alt="Dance For You" onclick="myfunction"> Dance For You
+            <div class="Overlay"> <p> 26 March 
+              Discover Solène Watcher. For you/Not For You is a Solo that can be read in both directions. Using a bifrontal det-up  </p>
+            </div> 
+            <div class="Details"> <a href="#Plus">Voir plus </a></div>
+       </div>
+  
+    <div class="event">
+        <img src="{{ asset('assets/images/concert.JPG') }}" alt="marathon" onclick="myfunction"> Marathon
+        <div class="Overlay"> <p> Il est l'un des marathons français les plus importants en nombre de participants, avec 5 564 participants ayant terminé la course en 2016 </p>
+        </div> 
+        <div class="Details"> <a href="#Plus">Voir plus </a></div>
+   </div>
+
+      </div>
+   
+    </section>
+
+        <iframe src="https://www.google.com/maps/d/embed?mid=1E2ovDcepQZXIJW4fzH1Fg_qIsGsbC50&ehbc=2E312F" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" frameborder="0"></iframe>
+      
+</main>
 {% endblock %}

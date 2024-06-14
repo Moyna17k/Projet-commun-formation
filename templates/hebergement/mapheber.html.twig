@@ -1,0 +1,242 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HebergementController!{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ asset('assets/css/pages/hebergement.css') }}">
+{% endblock %}
+
+{% block body %}
+
+<section class="imageContainer container-fluid g-0 my-5 position-relative">
+    <div class="title container-fluid d-flex justify-content-center align-items-center position-absolute top-50 ">
+        <h1 class="text-white">HÔTELS</h1>
+    </div>
+    <img class="img-fluid w-100" src="{{ asset('assets/images/hebergement/imghotel.png') }}" alt="hotel" >
+</section>
+
+<section class="row mx-3 mb-3">
+    <aside class="col-3 container">
+        <form class="position-sticky">
+            <section class="container accent text-white py-1 rounded ">
+                <div class="tarfis my-5">
+                    <h2>TARIFS</h2>
+                    <input type="range" class="form-range" id="customRange1">
+                </div>
+
+                <div class="notes my-5">
+                    <h2>NOTES</h2>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <h5>1 étoile</h5>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <h5>2 étoile</h5>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <h5>3 étoile</h5>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <h5>4 étoile</h5>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="services my-5">
+                    <h2>SERVICES</h2>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <h5>Animaux bienvenus</h5>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <h5>Accès PMR</h5>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <h5>Restauration</h5>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <h5>Parking privé</h5>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="langues my-5">
+                    <h2>LANGUES</h2>
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <h5>Anglais</h5>
+                        </label>
+                    </div>
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <h5>Allemagne</h5>
+                        </label>
+                    </div>
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <h5>Espagnol</h5>
+                        </label>
+                    </div>
+                </div>
+
+            </section>
+        </form>
+    </aside>
+
+    <main class="col-9 container">
+
+    <article>
+        <iframe src="https://www.google.com/maps/d/embed?mid=1E2ovDcepQZXIJW4fzH1Fg_qIsGsbC50&ehbc=2E312F" class="col-12" height="1000px" style="border:0;" allowfullscreen="" loading="lazy" frameborder="0"></iframe>
+    </article>
+
+
+        <section class="container">
+            <div class="container text-center  g-0">
+                <div class="row row-cols-4 ">
+                    <div class="card col my-3 g-0">
+                        <img class="img-fluid" src="{{ asset('assets/images/hebergement/image.png') }}" alt="image">
+                        <div class="card-body">
+                            <h6 class="card-text textAccent">Hôtel Saint-Nicolas</h6>
+                        </div>
+                    </div>
+
+                     <div class="card col my-3 g-0">
+                        <img class="img-fluid" src="{{ asset('assets/images/hebergement/image.png') }}" alt="image">
+                        <div class="card-body">
+                            <h6 class="card-text textAccent">Hôtel Saint-Nicolas</h6>
+                        </div>
+                    </div>
+
+                     <div class="card col my-3 g-0">
+                        <img class="img-fluid" src="{{ asset('assets/images/hebergement/image.png') }}" alt="image">
+                        <div class="card-body">
+                            <h6 class="card-text textAccent">Hôtel Saint-Nicolas</h6>
+                        </div>
+                    </div>
+
+                     <div class="card col my-3 g-0">
+                        <img class="img-fluid" src="{{ asset('assets/images/hebergement/image.png') }}" alt="image">
+                        <div class="card-body">
+                            <h6 class="card-text textAccent">Hôtel Saint-Nicolas</h6>
+                        </div>
+                    </div>
+
+                     <div class="card col my-3 g-0">
+                        <img class="img-fluid" src="{{ asset('assets/images/hebergement/image.png') }}" alt="image">
+                        <div class="card-body">
+                            <h6 class="card-text textAccent">Hôtel Saint-Nicolas</h6>
+                        </div>
+                    </div>
+
+                     <div class="card col my-3 g-0">
+                        <img class="img-fluid" src="{{ asset('assets/images/hebergement/image.png') }}" alt="image">
+                        <div class="card-body">
+                            <h6 class="card-text textAccent">Hôtel Saint-Nicolas</h6>
+                        </div>
+                    </div>
+
+                     <div class="card col my-3 g-0">
+                        <img class="img-fluid" src="{{ asset('assets/images/hebergement/image.png') }}" alt="image">
+                        <div class="card-body">
+                            <h6 class="card-text textAccent">Hôtel Saint-Nicolas</h6>
+                        </div>
+                    </div>
+
+                     <div class="card col my-3 g-0">
+                        <img class="img-fluid" src="{{ asset('assets/images/hebergement/image.png') }}" alt="image">
+                        <div class="card-body">
+                            <h6 class="card-text textAccent">Hôtel Saint-Nicolas</h6>
+                        </div>
+                    </div>
+
+                     <div class="card col my-3 g-0">
+                        <img class="img-fluid" src="{{ asset('assets/images/hebergement/image.png') }}" alt="image">
+                        <div class="card-body">
+                            <h6 class="card-text textAccent">Hôtel Saint-Nicolas</h6>
+                        </div>
+                    </div>
+
+                     <div class="card col my-3 g-0">
+                        <img class="img-fluid" src="{{ asset('assets/images/hebergement/image.png') }}" alt="image">
+                        <div class="card-body">
+                            <h6 class="card-text textAccent">Hôtel Saint-Nicolas</h6>
+                        </div>
+                    </div>
+
+                     <div class="card col my-3 g-0">
+                        <img class="img-fluid" src="{{ asset('assets/images/hebergement/image.png') }}" alt="image">
+                        <div class="card-body">
+                            <h6 class="card-text textAccent">Hôtel Saint-Nicolas</h6>
+                        </div>
+                    </div>
+
+                     <div class="card col my-3 g-0">
+                        <img class="img-fluid" src="{{ asset('assets/images/hebergement/image.png') }}" alt="image">
+                        <div class="card-body">
+                            <h6 class="card-text textAccent">Hôtel Saint-Nicolas</h6>
+                        </div>
+                    </div>
+
+                     <div class="card col my-3 g-0">
+                        <img class="img-fluid" src="{{ asset('assets/images/hebergement/image.png') }}" alt="image">
+                        <div class="card-body">
+                            <h6 class="card-text textAccent">Hôtel Saint-Nicolas</h6>
+                        </div>
+                    </div>
+
+                     <div class="card col my-3 g-0">
+                        <img class="img-fluid" src="{{ asset('assets/images/hebergement/image.png') }}" alt="image">
+                        <div class="card-body">
+                            <h6 class="card-text textAccent">Hôtel Saint-Nicolas</h6>
+                        </div>
+                    </div>
+
+                     <div class="card col my-3 g-0">
+                        <img class="img-fluid" src="{{ asset('assets/images/hebergement/image.png') }}" alt="image">
+                        <div class="card-body">
+                            <h6 class="card-text textAccent">Hôtel Saint-Nicolas</h6>
+                        </div>
+                    </div>
+
+                     <div class="card col my-3 g-0">
+                        <img class="img-fluid" src="{{ asset('assets/images/hebergement/image.png') }}" alt="image">
+                        <div class="card-body">
+                            <h6 class="card-text textAccent">Hôtel Saint-Nicolas</h6>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+</section>
+
+
+
+
+{% endblock %}

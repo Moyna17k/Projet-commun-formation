@@ -3,8 +3,8 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-<main class="container-fluid g-0">
-    <article class="container mt-5 pt-5">
+    <main class="container-fluid g-0">
+        <article class="container mt-5 pt-5">
             <div class="presentation d-flex flex-column justify-content-center align-items-center">
                 <div class="textContainer col-6 position-relative text-white app-bg">
                     <h1> LA ROCHELLE
@@ -17,70 +17,48 @@
                     <img src="{{ asset('/assets/images/home/image 4.png') }}" class="img-fluid" alt="Home image">
                 </div>
             </div>
-    </article>
+        </article>
 
-    <!-- -->
-    <section class="description container-fluid d-flex text-white flex-row text-center">
-        <h1 class="d-flex"><span class="quoteG position-relative">&ldquo;</span> PERLE MARTIME OU L'HISTOIRE S'EMBRASSE AVEC L'OCEAN, UN PORT DE CHARME OU CHAQUE RUE RACONTE SON RECIT SECULAIRE.<span class="quoteR">&ldquo;</span></h1>
-    </section>
-    <!-- -->
+        <!-- -->
+        <section class="description container-fluid d-flex text-white flex-row text-center">
+            <h1 class="d-flex"><span class="quoteG position-relative">&ldquo;</span> PERLE MARTIME OU L'HISTOIRE S'EMBRASSE AVEC L'OCEAN, UN PORT DE CHARME OU CHAQUE RUE RACONTE SON RECIT SECULAIRE.<span class="quoteR">&ldquo;</span></h1>
+        </section>
+        <!-- -->
 
-    <article class="activitesContainer">
-        <div class="main-title">
-            <h2>La Rochelle en activités</h2>
-        </div>
-        <div class="card-slider d-flex flex-row justify-content-center gap-4">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body card-bg text-center text-white">
-                    <h5 class="card-title">Card title</h5>
-                </div>
+        <article class="activitesContainer">
+            <div class="main-title">
+                <h2>La Rochelle en activités</h2>
             </div>
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body card-bg text-center text-white">
-                    <h5 class="card-title">Card title</h5>
-                </div>
+            <div class="card-slider d-flex flex-row justify-content-center gap-4">
+                {% for a in activite %}
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ asset('/assets/images/home/image 4.png') }}" class="card-img-top" alt="...">
+                        <div class="card-body card-bg text-center text-white">
+                            <h5 class="card-title">{{ a.nom_complet }}</h5>
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body card-bg text-center text-white">
-                    <h5 class="card-title">Card title</h5>
-                </div>
-            </div>
-        </div>
-    </article>
+        </article>
         <!-- -->
 
         <article class="container-main mt-5 d-flex flex-column justify-content-center align-items-center">
-        <!-- -->
-        <div class="main-title">
-            <h2 class="textAccent">La cuisine Rochelaise et ses produits locaux</h2>
-        </div>
+            <!-- -->
+            <div class="main-title">
+                <h2 class="textAccent">La cuisine Rochelaise et ses produits locaux</h2>
+            </div>
 
             <div id="carouselRestaurents" class="carousel slide col-9">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="{{ asset('/assets/images/home/image 4.png') }}" class="d-block w-100" alt="...">
-                        <div class="d-flex flex-column justify-content-center align-items-center mt-3 gap-3">
-                            <h4 class="text-center textAccent">BONSOIR</h4>
-                            <a href="" class="btn btn-primary px-5 py-3 accent"> VOIR </a>
+                    {% for r in restaurant %}
+                        <div class="carousel-item {% if loop.first %}active{% endif %}">
+                            <img src="{{ asset('/assets/images/home/image 4.png') }}" class="d-block w-100" alt="...">
+                            <div class="d-flex flex-column justify-content-center align-items-center mt-3 gap-3">
+                                <h4 class="text-center textAccent">{{ r.nom_complet }}</h4>
+                                <a href="" class="btn btn-primary px-5 py-3 accent"> VOIR </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{{ asset('/assets/images/home/image 4.png') }}" class="d-block w-100" alt="...">
-                        <div class="d-flex flex-column justify-content-center align-items-center mt-3 gap-3">
-                            <h4 class="text-center textAccent">BONSOoIR</h4>
-                            <a href="" class="btn btn-primary px-5 py-3 accent"> VOIR </a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{{ asset('/assets/images/home/image 4.png') }}" class="d-block w-100" alt="...">
-                        <div class="d-flex flex-column justify-content-center align-items-center mt-3 gap-3">
-                            <h4 class="text-center textAccent">BONSOoooIR</h4>
-                            <a href="" class="btn btn-primary px-5 py-3 accent"> VOIR </a>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselRestaurents" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -92,143 +70,113 @@
                 </button>
             </div>
 
-    </article>
+        </article>
 
-    <article class="container-fluid accent mt-5 pb-5 d-flex flex-column justify-content-center align-items-center">
-        <div class="mt-5 text-center">
-            <h3 class="textSalmon">Spectales et festivals</h3>
-            <h2 class="text-white border-bottom border-3 pb-2 borderSalmon px-2">EVENEMENT MAJEURS</h2>
-        </div>
+        <article class="container-fluid accent mt-5 pb-5 d-flex flex-column justify-content-center align-items-center">
+            <div class="mt-5 mb-5 text-center">
+                <h3 class="textSalmon">Spectales et festivals</h3>
+                <h2 class="text-white border-bottom border-3 pb-2 borderSalmon px-2">EVENEMENT MAJEURS</h2>
+            </div>
 
-        <div class="roadmap container d-flex row mt-5 g-0 justify-content-center align-items-center">
-            <div class="col-4"></div>
-            <div class="col-1 d-flex flex-column justify-content-center align-items-center">
-                <div class="frisePin bg-white d-grid"><i class="textSalmon bi bi-plus"></i></div>
-                <div class="friseLink text-white"><hr class="opacity-100"></div>
-            </div>
-            <div class="roadmapItemLeft col-4">
-                <div class="roadmapItem row g-0 bg-white textSalmon">
-                    <h3 class="textAccent">FESTIVAL INTERNATIONAL DU FILM</h3>
-                    <section class="d-flex flex-row col-11 justify-content-between position-absolute">
-                        <a class="btn px-3 salmon text-white">VOIR PLUS</a>
-                        <span>01/01/2024</span>
-                    </section>
-                </div>
-            </div>
-        </div>
+            {% for e in events %}
+                {% if loop.index is odd %}
+                    <div class="roadmap container d-flex row g-0 justify-content-center align-items-center">
+                        <div class="col-4"></div>
+                        <div class="col-1 d-flex flex-column justify-content-center align-items-center">
+                            <div class="frisePin bg-white d-grid"><i class="textSalmon bi bi-plus"></i></div>
+                            <div class="friseLink text-white"><hr class="opacity-100"></div>
+                        </div>
+                        <div class=" roadmapItemLeft col-4">
+                            <div class="roadmapItem row g-0 bg-white textSalmon">
+                                <h3 class="textAccent">{{ e.nom_spectacle }}</h3>
+                                <section class="d-flex flex-row col-11 justify-content-between position-absolute">
+                                    <a class="btn px-3 salmon text-white">VOIR PLUS</a>
+                                    <span>01/01/2024</span>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="roadmap container d-flex row g-0 justify-content-center align-items-center">
+                        <div class="roadmapItemRight col-4">
+                            <div class="roadmapItem row g-0 bg-white d-flex justify-content-end textSalmon">
+                                <h3 class="textAccent col-11 text-end">{{ e.nom_spectacle }}</h3>
+                                <section class="d-flex flex-row col-11 justify-content-between position-absolute">
+                                    <span>01/01/2024</span>
+                                    <a class="btn px-3 salmon text-white">VOIR PLUS</a>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="col-1 d-flex flex-column justify-content-center align-items-center">
+                            <div class="frisePin bg-white d-grid"><i class="textSalmon bi bi-plus"></i></div>
+                            <div class="friseLink text-white"><hr class="opacity-100"></div>
+                        </div>
+                        <div class="col-4"></div>
+                    </div>
+                {% endif %}
+            {% endfor %}
 
-        <div class="roadmap container d-flex row g-0 justify-content-center align-items-center">
-            <div class="roadmapItemRight col-4">
-                <div class="roadmapItem row g-0 bg-white d-flex justify-content-end textSalmon">
-                    <h3 class="textAccent col-11 text-end">FESTIVAL INTERNATIONAL</h3>
-                    <section class="d-flex flex-row col-11 justify-content-between position-absolute">
-                        <span>01/01/2024</span>
-                        <a class="btn px-3 salmon text-white">VOIR PLUS</a>
-                    </section>
-                </div>
-            </div>
-            <div class="col-1 d-flex flex-column justify-content-center align-items-center">
-                <div class="frisePin bg-white d-grid"><i class="textSalmon bi bi-plus"></i></div>
-                <div class="friseLink text-white"><hr class="opacity-100"></div>
-            </div>
-            <div class="col-4"></div>
-        </div>
+        </article>
 
-        <div class="roadmap container d-flex row g-0 justify-content-center align-items-center">
-            <div class="col-4"></div>
-            <div class="col-1 d-flex flex-column justify-content-center align-items-center">
-                <div class="frisePin bg-white d-grid"><i class="textSalmon bi bi-plus"></i></div>
-                <div class="friseLink text-white"><hr class="opacity-100"></div>
+        <!-- -->
+        <article class="container-fluid hotelContainer my-5">
+            <div class="contianer title d-flex flex-column pt-2 justify-content-center align-items-center">
+                <h2 class="textAccent">BESOIN D'UN LOGEMENT ?</h2>
+                <h3 class="textSalmon">Voici notre Séléction !</h3>
+                <i class="bi bi-chevron-right textAccent"></i>
             </div>
-            <div class="roadmapItemLeft col-4">
-                <div class="roadmapItem row g-0 bg-white textSalmon">
-                    <h3 class="textAccent">FESTIVAL INTERNATIONAL DU FILM</h3>
-                    <section class="d-flex flex-row col-11 justify-content-between position-absolute">
-                        <a class="btn px-3 salmon text-white">VOIR PLUS</a>
-                        <span>01/01/2024</span>
-                    </section>
-                </div>
-            </div>
-        </div>
 
-        <div class="roadmap container d-flex row g-0 justify-content-center align-items-center">
-            <div class="roadmapItemRight col-4">
-                <div class="roadmapItem row g-0 bg-white d-flex justify-content-end textSalmon">
-                    <h3 class="textAccent col-11 text-end">FESTIVAL INTERNATIONAL</h3>
-                    <section class="d-flex flex-row col-11 justify-content-between position-absolute">
-                        <span>01/01/2024</span>
-                        <a class="btn px-3 salmon text-white">VOIR PLUS</a>
-                    </section>
-                </div>
-            </div>
-            <div class="col-1 d-flex flex-column justify-content-center align-items-center">
-                <div class="frisePin bg-white d-grid"><i class="textSalmon bi bi-plus"></i></div>
-                <div class="friseLink text-white"><hr class="opacity-100"></div>
-            </div>
-            <div class="col-4"></div>
-        </div>
-
-    </article>
-
-    <!-- -->
-    <article class="container-fluid hotelContainer my-5">
-        <div class="contianer title d-flex flex-column pt-2 justify-content-center align-items-center">
-            <h2 class="textAccent">BESOIN D'UN LOGEMENT ?</h2>
-            <h3 class="textSalmon">Voici notre Séléction !</h3>
-            <i class="bi bi-chevron-right textAccent"></i>
-        </div>
-
-        <div class="container">
-            <div id="carouselHotels" class="carousel slide position-relative d-flex flex-column justify-content-center align-items-center">
-                <div class="carousel-inner">
-                    {% for h in hotel %}
-                        <div class="carousel-item {% if loop.first %}active{% endif %}">
-                            <div class="hotelDescContainer d-flex flex-column justify-content-center align-items-center">
-                                <div class="container title mb-2">
-                                    <h2>La Rochelle <span class="textAccent">/ {{ h.nom_complet }} </span></h2>
-                                </div>
-                                <div class="hotelDescWrapper row d-flex flex-row justify-content-center align-items-start">
-                                    <div class="col-6">
-                                        <img src="{{ asset('/assets/images/home/image 4.png') }}" class="img-fluid" alt="...">
+            <div class="container">
+                <div id="carouselHotels" class="carousel slide position-relative d-flex flex-column justify-content-center align-items-center">
+                    <div class="carousel-inner">
+                        {% for h in hotel %}
+                            <div class="carousel-item {% if loop.first %}active{% endif %}">
+                                <div class="hotelDescContainer d-flex flex-column justify-content-center align-items-center">
+                                    <div class="container title mb-2">
+                                        <h2>La Rochelle <span class="textAccent">/ {{ h.nom_complet }} </span></h2>
                                     </div>
-                                    <div class="col-6 hotelDesc d-flex flex-column gap-3">
-                                        <div class="hotelTags">
-                                            <span class="accent px-3 py-1 text-white">HOTEL</span>
-                                            <span class="accent px-3 py-1 text-white">EMPLACEMENT</span>
+                                    <div class="hotelDescWrapper row d-flex flex-row justify-content-center align-items-start">
+                                        <div class="col-6">
+                                            <img src="{{ asset('/assets/images/home/image 4.png') }}" class="img-fluid" alt="...">
                                         </div>
-                                        <h4 class="textAccent">{{ h.nom_complet }}</h4>
-                                        <div class="note">4,2 (121)</div>
-                                        <div class="elements">
-                                            <span class="text-white py-1 px-2"><a href="#"><i class="bi bi-globe2"></i><span class="mx-2">SITE WEB</span></a></span>
-                                            <span class="text-white py-1 px-2"><a href="#"><i class="bi bi-cursor"></i><span class="mx-2">ITINERAIRE</span></a></span>
-                                            <span class="text-white py-1 px-2"><a href="#"><i class="bi bi-telephone"></i><span class="mx-2">TELEPHONE</span></a></span>
-                                        </div>
-                                        <div class="textDesc">Hotel simple avec jardin interieur</div>
-                                        <div class="infos">
-                                            <span><i class="bi bi-car-front-fill"></i><span class="mx-2">Parking gratuit</span></span>
-                                            <span><i class="bi bi-wifi"></i><span class="mx-2">Wi-Fi gratuit</span></span>
-                                        </div>
-                                        <div class="prix">
-                                            <span class="accent text-white py-1 px-2">85 $</span>
+                                        <div class="col-6 hotelDesc d-flex flex-column gap-3">
+                                            <div class="hotelTags">
+                                                <span class="accent px-3 py-1 text-white">HOTEL</span>
+                                                <span class="accent px-3 py-1 text-white">EMPLACEMENT</span>
+                                            </div>
+                                            <h4 class="textAccent">{{ h.nom_complet }}</h4>
+                                            <div class="note">4,2 (121)</div>
+                                            <div class="elements">
+                                                <span class="text-white py-1 px-2"><a href="#"><i class="bi bi-globe2"></i><span class="mx-2">SITE WEB</span></a></span>
+                                                <span class="text-white py-1 px-2"><a href="#"><i class="bi bi-cursor"></i><span class="mx-2">ITINERAIRE</span></a></span>
+                                                <span class="text-white py-1 px-2"><a href="#"><i class="bi bi-telephone"></i><span class="mx-2">TELEPHONE</span></a></span>
+                                            </div>
+                                            <div class="textDesc">Hotel simple avec jardin interieur</div>
+                                            <div class="infos">
+                                                <span><i class="bi bi-car-front-fill"></i><span class="mx-2">Parking gratuit</span></span>
+                                                <span><i class="bi bi-wifi"></i><span class="mx-2">Wi-Fi gratuit</span></span>
+                                            </div>
+                                            <div class="prix">
+                                                <span class="accent text-white py-1 px-2">85 $</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    {% endfor %}
+                        {% endfor %}
+                    </div>
+                    <button class="carouselHotelPrev position-absolute textAccent" type="button" data-bs-target="#carouselHotels" data-bs-slide="prev">
+                        <span class="bi bi-chevron-left" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carouselHotelNext position-absolute textAccent" type="button" data-bs-target="#carouselHotels" data-bs-slide="next">
+                        <span class="bi bi-chevron-right" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-                <button class="carouselHotelPrev position-absolute textAccent" type="button" data-bs-target="#carouselHotels" data-bs-slide="prev">
-                    <span class="bi bi-chevron-left" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carouselHotelNext position-absolute textAccent" type="button" data-bs-target="#carouselHotels" data-bs-slide="next">
-                    <span class="bi bi-chevron-right" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
-        </div>
-    </article>
-</main>
+        </article>
+    </main>
 {% endblock %}
 
 {% block js %}
