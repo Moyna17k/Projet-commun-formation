@@ -25,21 +25,21 @@
         </section>
         <!-- -->
 
-        <article class="activitesContainer">
-            <div class="main-title">
-                <h2>La Rochelle en activités</h2>
+    <article class="activitesContainer">
+        <div class="main-title">
+            <h2>La Rochelle en activités</h2>
+        </div>
+        <div class="card-slider d-flex flex-row justify-content-center gap-4">
+            {% for a in activite %}
+            <div class="card" style="width: 18rem;">
+                <img src="{{ asset('/assets/images/home/image 4.png') }}" class="card-img-top" alt="...">
+                <div class="card-body card-bg text-center text-white">
+                    <h5 class="card-title">{{ a.nom_complet }}</h5>
+                </div>
             </div>
-            <div class="card-slider d-flex flex-row justify-content-center gap-4">
-                {% for a in activite %}
-                    <div class="card" style="width: 18rem;">
-                        <img src="{{ asset('/assets/images/home/image 4.png') }}" class="card-img-top" alt="...">
-                        <div class="card-body card-bg text-center text-white">
-                            <h5 class="card-title">{{ a.nom_complet }}</h5>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        </article>
+            {% endfor %}
+        </div>
+    </article>
         <!-- -->
 
         <article class="container-main mt-5 d-flex flex-column justify-content-center align-items-center">
@@ -51,13 +51,13 @@
             <div id="carouselRestaurents" class="carousel slide col-9">
                 <div class="carousel-inner">
                     {% for r in restaurant %}
-                        <div class="carousel-item {% if loop.first %}active{% endif %}">
-                            <img src="{{ asset('/assets/images/home/image 4.png') }}" class="d-block w-100" alt="...">
-                            <div class="d-flex flex-column justify-content-center align-items-center mt-3 gap-3">
-                                <h4 class="text-center textAccent">{{ r.nom_complet }}</h4>
-                                <a href="" class="btn btn-primary px-5 py-3 accent"> VOIR </a>
-                            </div>
+                    <div class="carousel-item {% if loop.first %}active{% endif %}">
+                        <img src="{{ asset('/assets/images/home/image 4.png') }}" class="d-block w-100" alt="...">
+                        <div class="d-flex flex-column justify-content-center align-items-center mt-3 gap-3">
+                            <h4 class="text-center textAccent">{{ r.nom_complet }}</h4>
+                            <a href="" class="btn btn-primary px-5 py-3 accent"> VOIR </a>
                         </div>
+                    </div>
                     {% endfor %}
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselRestaurents" data-bs-slide="prev">
@@ -70,62 +70,53 @@
                 </button>
             </div>
 
-        </article>
+    </article>
 
-        <article class="container-fluid accent mt-5 pb-5 d-flex flex-column justify-content-center align-items-center">
-            <div class="mt-5 mb-5 text-center">
-                <h3 class="textSalmon">Spectales et festivals</h3>
-                <h2 class="text-white border-bottom border-3 pb-2 borderSalmon px-2">EVENEMENT MAJEURS</h2>
-            </div>
+    <article class="container-fluid accent mt-5 pb-5 d-flex flex-column justify-content-center align-items-center">
+        <div class="mt-5 mb-5 text-center">
+            <h3 class="textSalmon">Spectales et festivals</h3>
+            <h2 class="text-white border-bottom border-3 pb-2 borderSalmon px-2">EVENEMENT MAJEURS</h2>
+        </div>
 
-            {% for e in events %}
-                {% if loop.index is odd %}
-                    <div class="roadmap container d-flex row g-0 justify-content-center align-items-center">
-                        <div class="col-4"></div>
-                        <div class="col-1 d-flex flex-column justify-content-center align-items-center">
-                            <div class="frisePin bg-white d-grid"><i class="textSalmon bi bi-plus"></i></div>
-                            <div class="friseLink text-white"><hr class="opacity-100"></div>
-                        </div>
-                        <div class=" roadmapItemLeft col-4">
-                            <div class="roadmapItem row g-0 bg-white textSalmon">
-                                <h3 class="textAccent">{{ e.nom_spectacle }}</h3>
-                                <section class="d-flex flex-row col-11 justify-content-between position-absolute">
-                                    <a class="btn px-3 salmon text-white">VOIR PLUS</a>
-                                    <span>01/01/2024</span>
-                                </section>
-                            </div>
+        {% for e in events %}
+            {% if loop.index is odd %}
+                <div class="roadmap container d-flex row g-0 justify-content-center align-items-center">
+                    <div class="col-4"></div>
+                    <div class="col-1 d-flex flex-column justify-content-center align-items-center">
+                        <div class="frisePin bg-white d-grid"><i class="textSalmon bi bi-plus"></i></div>
+                        <div class="friseLink text-white"><hr class="opacity-100"></div>
+                    </div>
+                    <div class=" roadmapItemLeft col-4">
+                        <div class="roadmapItem row g-0 bg-white textSalmon">
+                            <h3 class="textAccent">{{ e.nom_spectacle }}</h3>
+                            <section class="d-flex flex-row col-11 justify-content-between position-absolute">
+                                <a class="btn px-3 salmon text-white">VOIR PLUS</a>
+                                <span>01/01/2024</span>
+                            </section>
                         </div>
                     </div>
-                {% else %}
-                    <div class="roadmap container d-flex row g-0 justify-content-center align-items-center">
-                        <div class="roadmapItemRight col-4">
-                            <div class="roadmapItem row g-0 bg-white d-flex justify-content-end textSalmon">
-                                <h3 class="textAccent col-11 text-end">{{ e.nom_spectacle }}</h3>
-                                <section class="d-flex flex-row col-11 justify-content-between position-absolute">
-                                    <span>01/01/2024</span>
-                                    <a class="btn px-3 salmon text-white">VOIR PLUS</a>
-                                </section>
-                            </div>
+                </div>
+            {% else %}
+                <div class="roadmap container d-flex row g-0 justify-content-center align-items-center">
+                    <div class="roadmapItemRight col-4">
+                        <div class="roadmapItem row g-0 bg-white d-flex justify-content-end textSalmon">
+                            <h3 class="textAccent col-11 text-end">{{ e.nom_spectacle }}</h3>
+                            <section class="d-flex flex-row col-11 justify-content-between position-absolute">
+                                <span>01/01/2024</span>
+                                <a class="btn px-3 salmon text-white">VOIR PLUS</a>
+                            </section>
                         </div>
-                        <div class="col-1 d-flex flex-column justify-content-center align-items-center">
-                            <div class="frisePin bg-white d-grid"><i class="textSalmon bi bi-plus"></i></div>
-                            <div class="friseLink text-white"><hr class="opacity-100"></div>
-                        </div>
-                        <div class="col-4"></div>
                     </div>
-                {% endif %}
-            {% endfor %}
+                    <div class="col-1 d-flex flex-column justify-content-center align-items-center">
+                        <div class="frisePin bg-white d-grid"><i class="textSalmon bi bi-plus"></i></div>
+                        <div class="friseLink text-white"><hr class="opacity-100"></div>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+            {% endif %}
+        {% endfor %}
 
-        </article>
-
-        <!-- -->
-        <article class="container-fluid hotelContainer my-5">
-            <div class="contianer title d-flex flex-column pt-2 justify-content-center align-items-center">
-                <h2 class="textAccent">BESOIN D'UN LOGEMENT ?</h2>
-                <h3 class="textSalmon">Voici notre Séléction !</h3>
-                <i class="bi bi-chevron-right textAccent"></i>
-            </div>
-
+    </article>
             <div class="container">
                 <div id="carouselHotels" class="carousel slide position-relative d-flex flex-column justify-content-center align-items-center">
                     <div class="carousel-inner">
