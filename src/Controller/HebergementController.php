@@ -21,7 +21,7 @@ class HebergementController extends AbstractController
         ]); 
     }
 
-    #[Route('/hebergement/listheber', name: 'app_list_hebergement')]
+    #[Route('/hebergement/hotels/hotel1', name: 'app_list_hebergement')]
     public function accueil(): Response
     {
         return $this->render('hebergement/listheber.html.twig', [
@@ -29,7 +29,7 @@ class HebergementController extends AbstractController
         ]); 
     }
 
-    #[Route('/hebergement/mapheber', name: 'app_map_hebergement')]
+    #[Route('/hebergement/hotels', name: 'app_map_hebergement')]
     public function map(): Response
     {
         return $this->render('hebergement/mapheber.html.twig', [
