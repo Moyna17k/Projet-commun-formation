@@ -70,7 +70,7 @@ class DashboardController extends AbstractDashboardController
 
         if ($this->security->isGranted('ROLE_ADMIN')) {
             yield MenuItem::section('Admin');     
-            yield MenuItem::linkToCrud('Role Admin', 'fas fa-list', RoleAdmin::class);
+            // yield MenuItem::linkToCrud('Role Admin', 'fas fa-list', RoleAdmin::class);
             yield MenuItem::linkToCrud('Set Category', 'fas fa-list', SetCategory::class);
         }
     }    

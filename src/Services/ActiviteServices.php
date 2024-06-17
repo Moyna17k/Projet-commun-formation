@@ -31,7 +31,6 @@ class ActiviteServices
         $count = 0; // Variable de comptage
         
         foreach ($r as $value) {
-            $Adresse = isset($value['matching_etablissements'][0]['adresse']) ? $value['matching_etablissements'][0]['adresse'] : 'N/A';
         
             $nomCompletArray[] = [
                 'nom_complet' => $value['nom_complet'],
