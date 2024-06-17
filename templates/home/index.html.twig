@@ -55,7 +55,7 @@
         <article class="container-main mt-5 d-flex flex-column justify-content-center align-items-center">
             <!-- -->
             <div class="main-title">
-                <h2 class="textAccent">La cuisine Rochelaise et ses produits locaux</h2>
+                <h2 class="textAccent text-center">La cuisine Rochelaise et ses produits locaux</h2>
             </div>
 
             <div id="carouselRestaurents" class="carousel slide col-9">
@@ -187,21 +187,21 @@
                                     <div class="container title mb-2">
                                         <h2>La Rochelle <span class="textAccent">/ {{ h.nom_complet }} </span></h2>
                                     </div>
-                                    <div class="hotelDescWrapper row d-flex flex-row justify-content-center align-items-start">
-                                        <div class="col-6">
+                                    <div class="hotelDescWrapper row d-flex flex-sm-row flex-column justify-content-center align-items-start">
+                                        <div class="col-sm-6 col-10 mb-3">
                                             <img src="{{ asset('/assets/images/home/image 4.png') }}" class="img-fluid" alt="...">
                                         </div>
-                                        <div class="col-6 hotelDesc d-flex flex-column gap-3">
+                                        <div class="col-sm-6 col-10 hotelDesc d-flex flex-column gap-3">
                                             <div class="hotelTags">
                                                 <span class="accent px-3 py-1 text-white">HOTEL</span>
                                                 <span class="accent px-3 py-1 text-white">EMPLACEMENT</span>
                                             </div>
                                             <h4 class="textAccent">{{ h.nom_complet }}</h4>
                                             <div class="note">4,2 (121)</div>
-                                            <div class="elements">
-                                                <span class="text-white py-1 px-2"><a href="#"><i class="bi bi-globe2"></i><span class="mx-2">SITE WEB</span></a></span>
-                                                <span class="text-white py-1 px-2"><a href="#"><i class="bi bi-cursor"></i><span class="mx-2">ITINERAIRE</span></a></span>
-                                                <span class="text-white py-1 px-2"><a href="#"><i class="bi bi-telephone"></i><span class="mx-2">TELEPHONE</span></a></span>
+                                            <div class="elements d-flex flex-column col-5">
+                                                <span class="text-white py-1 px-2 my-1"><a href="#"><i class="bi bi-globe2"></i><span class="mx-2">SITE WEB</span></a></span>
+                                                <span class="text-white py-1 px-2 my-1"><a href="#"><i class="bi bi-cursor"></i><span class="mx-2">ITINERAIRE</span></a></span>
+                                                <span class="text-white py-1 px-2 my-1"><a href="#"><i class="bi bi-telephone"></i><span class="mx-2">TELEPHONE</span></a></span>
                                             </div>
                                             <div class="textDesc">Hotel simple avec jardin interieur</div>
                                             <div class="infos">
