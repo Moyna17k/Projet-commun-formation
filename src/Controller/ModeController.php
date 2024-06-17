@@ -27,7 +27,7 @@ class ModeController extends AbstractController
     ): Response
     {
         $items = $mode->findBy(['slug' => $slug]);
-        return $this->render('produit_local/category.html.twig', [
+        return $this->render('mode/category.html.twig', [
             'items' => $items,
         ]);
     }
