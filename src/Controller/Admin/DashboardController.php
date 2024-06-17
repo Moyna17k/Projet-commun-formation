@@ -6,15 +6,12 @@ use App\Entity\Mode;
 use App\Entity\User;
 use App\Entity\Sport;
 use App\Entity\Produits;
-use App\Entity\RoleAdmin;
 use App\Entity\SetCategory;
-use App\Security\Voter\BlogPostVoter;
 use Symfony\Bundle\SecurityBundle\Security;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
-use Symfony\Component\Security\Http\Attribute\IsGranted;
 use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 
