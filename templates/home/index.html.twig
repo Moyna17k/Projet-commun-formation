@@ -4,16 +4,16 @@
 
 {% block body %}
     <main class="container-fluid g-0">
-        <article class="container mt-5 pt-5">
+        <article class="container-fluid mt-md-5 m-0 pt-md-5 p-0 ">
             <div class="presentation d-flex flex-column justify-content-center align-items-center">
-                <div class="textContainer col-6 position-relative text-white app-bg">
+                <div class="textContainer col-md-6 position-relative text-white app-bg">
                     <h1> LA ROCHELLE
                         <br>
                         UNE VILLE D'HISTOIRE
                         <br>
                         ET D'ACTIVITES</h1>
                 </div>
-                <div class="position-relative col-6 imgContainer">
+                <div class="position-relative col-md-6 imgContainer">
                     <img src="{{ asset('/assets/images/home/image 4.png') }}" class="img-fluid" alt="Home image">
                 </div>
             </div>
@@ -29,7 +29,7 @@
             <div class="main-title">
                 <h2>La Rochelle en activités</h2>
             </div>
-            <div class="card-slider d-flex flex-row justify-content-center gap-4">
+            <div class="card-slider d-flex flex-md-row flex-wrap justify-content-center align-content-md-around gap-4">
                 <div class="card" style="width: 18rem;">
                     <img src="{{ asset('assets/images/home/image6.png') }}" class="card-img-top" alt="...">
                     <div class="card-body card-bg text-center text-white">
@@ -94,19 +94,19 @@
 
         </article>
 
-        <article class="container-fluid accent mt-5 pb-5 d-flex flex-column justify-content-center align-items-center">
+        <article class="container-fluid accent mt-5 pb-5 d-flex flex-column justify-content-center align-items-center gap-md-0 gap-4">
             <div class="mt-5 text-center">
                 <h3 class="textSalmon">Spectales et festivals</h3>
                 <h2 class="text-white border-bottom border-3 pb-2 borderSalmon px-2">EVENEMENT MAJEURS</h2>
             </div>
 
             <div class="roadmap container d-flex row mt-5 g-0 justify-content-center align-items-center">
-                <div class="col-4"></div>
-                <div class="col-1 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-4 d-md-block d-none"></div>
+                <div class="col-1 d-md-flex d-none flex-column justify-content-center align-items-center">
                     <div class="frisePin bg-white d-grid"><i class="textSalmon bi bi-plus"></i></div>
                     <div class="friseLink text-white"><hr class="opacity-100"></div>
                 </div>
-                <div class="roadmapItemLeft col-4">
+                <div class="roadmapItemLeft col-md-4 col-8">
                     <div class="roadmapItem row g-0 bg-white textSalmon">
                         <h3 class="textAccent">FESTIVAL INTERNATIONAL DU FILM</h3>
                         <section class="d-flex flex-row col-11 justify-content-between position-absolute">
@@ -118,7 +118,7 @@
             </div>
 
             <div class="roadmap container d-flex row g-0 justify-content-center align-items-center">
-                <div class="roadmapItemRight col-4">
+                <div class="roadmapItemRight col-4  col-md-4 col-8">
                     <div class="roadmapItem row g-0 bg-white d-flex justify-content-end textSalmon">
                         <h3 class="textAccent col-11 text-end">FESTIVAL INTERNATIONAL</h3>
                         <section class="d-flex flex-row col-11 justify-content-between position-absolute">
@@ -127,20 +127,20 @@
                         </section>
                     </div>
                 </div>
-                <div class="col-1 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-1 d-md-flex d-none flex-column justify-content-center align-items-center">
                     <div class="frisePin bg-white d-grid"><i class="textSalmon bi bi-plus"></i></div>
                     <div class="friseLink text-white"><hr class="opacity-100"></div>
                 </div>
-                <div class="col-4"></div>
+                <div class="col-4 d-md-block d-none"></div>
             </div>
 
             <div class="roadmap container d-flex row g-0 justify-content-center align-items-center">
-                <div class="col-4"></div>
-                <div class="col-1 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-4 d-md-block d-none"></div>
+                <div class="col-1 d-md-flex d-none flex-column justify-content-center align-items-center">
                     <div class="frisePin bg-white d-grid"><i class="textSalmon bi bi-plus"></i></div>
                     <div class="friseLink text-white"><hr class="opacity-100"></div>
                 </div>
-                <div class="roadmapItemLeft col-4">
+                <div class="roadmapItemLeft col-md-4 col-8">
                     <div class="roadmapItem row g-0 bg-white textSalmon">
                         <h3 class="textAccent">FESTIVAL INTERNATIONAL DU FILM</h3>
                         <section class="d-flex flex-row col-11 justify-content-between position-absolute">
@@ -152,7 +152,7 @@
             </div>
 
             <div class="roadmap container d-flex row g-0 justify-content-center align-items-center">
-                <div class="roadmapItemRight col-4">
+                <div class="roadmapItemRight col-4 col-md-4 col-8">
                     <div class="roadmapItem row g-0 bg-white d-flex justify-content-end textSalmon">
                         <h3 class="textAccent col-11 text-end">FESTIVAL INTERNATIONAL</h3>
                         <section class="d-flex flex-row col-11 justify-content-between position-absolute">
@@ -161,11 +161,11 @@
                         </section>
                     </div>
                 </div>
-                <div class="col-1 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-1 d-md-flex d-none flex-column justify-content-center align-items-center">
                     <div class="frisePin bg-white d-grid"><i class="textSalmon bi bi-plus"></i></div>
                     <div class="friseLink text-white"><hr class="opacity-100"></div>
                 </div>
-                <div class="col-4"></div>
+                <div class="col-4 d-md-block d-none"></div>
             </div>
 
         </article>
